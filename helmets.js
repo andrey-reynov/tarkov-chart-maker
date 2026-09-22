@@ -16,11 +16,11 @@ function figure(item,view){
   }
   return `<span class="helmet-view">${new XMLSerializer().serializeToString(svg)}<small>${view.toUpperCase()}</small></span>`;
 }
-function extras(item){
-  const labels=[];
-  for(const [name,value] of [['Eyes',item.eyes],['Face',item.face],['Jaw',item.jaw],['Throat',item.throat],['Back neck',item.backNeck]])if(value)labels.push(`${name} ${value}`);
-  return labels.length?labels.map(label=>`<span class="zone-chip">${label}</span>`).join(''):'<span class="muted">No built in face protection</span>';
+function zoneSummary(item){
+  const labels=[['Top',item.top],['Back',item.back],['Ears',item.ears],['Eyes',item.eyes],['Face',item.face],['Jaw',item.jaw],['Throat',item.throat],['Back neck',item.backNeck]];
+  return labels.filter(([,level])=>level).map(([name,level])=>`${name} ${level}`).join(' · ')||'No recorded armor zones';
 }
+const hearing=value=>({None:'Clear',Low:'Slightly muffled',High:'Heavily muffled'}[value]||'Unknown');
 function render(){
   const search=$('#search').value,sort=$('#sort').value;
   const items=helmetData.items.filter(item=>(helmetClass==='all'||item.class===Number(helmetClass))&&fuzzy(`${item.name} ${item.acquisition?.trader||''}`,search));
@@ -29,7 +29,7 @@ function render(){
   const classes=[...new Set(items.map(item=>item.class))].sort((a,b)=>b-a);
   $('#chart').innerHTML=classes.length?classes.map(cls=>{
     const group=items.filter(item=>item.class===cls);
-    return `<section class="group"><div class="group-head"><h2>${cls?`CLASS ${cls}`:'UNRATED'}</h2><span class="count">${group.length} ITEMS</span><div class="rule"></div></div><div class="table-wrap"><table class="helmet-table"><thead><tr><th>HELMET</th><th>BUILT IN COVERAGE</th><th>OTHER ZONES</th><th class="numeric">DUR</th><th>DETAILS</th><th>OBTAIN</th></tr></thead><tbody>${group.map(item=>`<tr><td><div class="item"><img class="item-icon" src="${safe(item.localIcon)}" alt="" loading="lazy"><a class="itemlink" href="${safe(item.link)}" target="_blank" rel="noreferrer">${safe(item.name)}</a></div></td><td><div class="helmet-coverage">${figure(item,'front')}${figure(item,'back')}<span class="helmet-summary"><span>Top ${item.top||'—'}</span><span>Back ${item.back||'—'}</span><span>Ears ${item.ears||'—'}</span></span></div></td><td class="zones">${extras(item)}</td><td class="numeric">${format(item.durability)}</td><td class="details"><span>⚖ ${item.weight??'—'} kg</span><span>↗ ${item.speed??0}% speed</span><span>◈ ${item.ergo??0}% ergo</span><span>Sound: ${safe(item.deafening||'—')}</span></td><td class="obtain">${TarkovUI.acquisition(item.acquisition,traderIcons)}</td></tr>`).join('')}</tbody></table></div></section>`;
+    return `<section class="group"><div class="group-head"><h2>CLASS ${cls}</h2><span class="count">${group.length} ITEMS</span><div class="rule"></div></div><div class="table-wrap"><table class="helmet-table"><thead><tr><th class="helmet-class-cell"></th><th>HELMET</th><th>FRONT / BACK</th><th class="numeric">DUR</th><th>ZONES</th><th>DETAILS</th><th>OBTAIN</th></tr></thead><tbody>${group.map(item=>`<tr><td class="helmet-class-cell" style="background:${colors[cls]}">${cls}</td><td><div class="item"><img class="item-icon" src="${safe(item.localIcon)}" alt="" loading="lazy"><a class="itemlink" href="${safe(item.link)}" target="_blank" rel="noreferrer">${safe(item.name)}</a></div></td><td><div class="helmet-coverage">${figure(item,'front')}${figure(item,'back')}</div></td><td class="numeric helmet-dur">${format(item.durability)}</td><td class="helmet-zones">${safe(zoneSummary(item))}</td><td class="details"><span>⚖ ${item.weight??'—'} kg</span><span>↗ ${item.speed??0}% speed</span><span>◈ ${item.ergo??0}% ergo</span><span>Hearing: ${hearing(item.deafening)}</span></td><td class="obtain">${TarkovUI.acquisition(item.acquisition,traderIcons)}</td></tr>`).join('')}</tbody></table></div></section>`;
   }).join(''):'<div class="empty">No close matches.</div>';
 }
 async function init(){

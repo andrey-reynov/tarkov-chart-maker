@@ -12,6 +12,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 
 ### Added
 
+- Plain HTML, CSS, and JavaScript offline website in `release/site/`, with local data and image files.
 - Three-section guide with Armor + Rigs, Helmets, and Ammo tabs; Armor + Rigs is the default view.
 - Helmet coverage from the supplied vector, with top, back, ear, and other protected zones.
 - Caliber-grouped ammo view with a caliber dropdown and class penetration comparison.
@@ -32,6 +33,9 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 
 ### Changed
 
+- Helmet charts now place durability after coverage icons, show compact per-zone armor classes, and group weight, movement, ergonomics, and hearing in Details.
+- Helmet rows now repeat the armor class number in the colored class strip.
+- The offline website folder is the recommended release format instead of the single-file wrapper.
 - Replaced the helmet coverage icon with owner-drawn front and back SVGs; shell, ears, eyes, face/jaw, throat, and back neck can now color independently where the data supports them.
 - Kept the lower back-of-head shape and collar neutral; only the separate throat and back-neck regions receive helmet coverage colors.
 - Trader labels now put the trader before “barter”; acquisition icons sit beside names and prices.

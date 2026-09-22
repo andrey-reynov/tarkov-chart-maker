@@ -37,7 +37,7 @@ npm run serve
 
 Open `http://localhost:4173` for the searchable browser view. Search is typo tolerant and matches partial names, variants, and acquisition sources even when the query does not begin with the first word.
 
-`npm run release` creates a ready-to-share package in `release/`: one self-contained offline HTML website covering all three sections, full PNG charts for armor, helmets, and ammo, smaller armor-class and ammo-caliber PNGs, and a ZIP containing the complete set. The HTML embeds all data, item artwork, trader portraits, coverage masters, and armor SVG exports, so it opens directly without a local server or internet connection. The ZIP additionally preserves every item PNG under `sources/images/`, trader portraits under `sources/images/traders/`, saved data, and editable coverage SVG masters. Item and source links open their online pages when a connection is available.
+`npm run release` creates a ready-to-share package in `release/`. Open `release/site/index.html` for the offline guide. Keep the whole `site/` folder together: its three pages, CSS, JavaScript, saved data, and images use relative paths and require no local server or internet connection. The package also contains full PNG charts, smaller armor-class and ammo-caliber PNGs, and a ZIP with the website and source files. Item and source links open their online pages when a connection is available. A legacy single-file HTML export is included for compatibility, but `site/` is the recommended version.
 
 ## Sources
 
@@ -86,7 +86,7 @@ The diagrams are deliberately schematic. They explain equipment coverage and do 
 - `scripts/chart.mjs` — SVG chart renderer
 - `scripts/gear-chart.mjs` — helmet and ammo SVG chart renderers
 - `scripts/export.mjs` — SVG and PNG export
-- `scripts/release.mjs` — self-contained HTML, PNG set, and ZIP release builder
+- `scripts/release.mjs` — offline website folder, PNG set, and ZIP release builder
 
 ## Contributing
 
