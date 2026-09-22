@@ -28,10 +28,13 @@ npm run refresh
 npm run plates
 npm run images
 npm run export
+npm run release
 npm run serve
 ```
 
 Open `http://localhost:4173` for the searchable browser view. Search is typo tolerant and matches partial names, variants, and acquisition sources even when the query does not begin with the first word.
+
+`npm run release` creates a ready-to-share package in `release/`: one self-contained offline HTML website, three full PNG charts, per-class PNG charts, and a ZIP containing the complete set. The HTML embeds all data, item artwork, coverage masters, and SVG exports, so it opens directly without a local server or internet connection.
 
 ## Sources
 
@@ -72,6 +75,7 @@ The diagrams are deliberately schematic. They explain equipment coverage and do 
 - `scripts/upgrade-images.mjs` — refresh high-resolution artwork
 - `scripts/chart.mjs` — SVG chart renderer
 - `scripts/export.mjs` — SVG and PNG export
+- `scripts/release.mjs` — self-contained HTML, PNG set, and ZIP release builder
 
 ## Contributing
 

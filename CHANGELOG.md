@@ -21,6 +21,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 - Acquisition information for trader sales, estimated barter cost, flea market, craft, quest reward, and FIR or special availability.
 - Reviewed acquisition override file for event, Arena, quest, and other exceptional availability.
 - Typo-tolerant web search that matches names, variants, and acquisition sources from any position.
+- One-command release builder for a self-contained offline HTML website, full PNG charts, per-class PNG charts, and a ZIP package.
 
 ### Changed
 

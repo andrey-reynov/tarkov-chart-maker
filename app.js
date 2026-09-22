@@ -89,16 +89,35 @@ function render(){
 }
 
 async function init(){
-  const responses=await Promise.all(['data/armor.json','data/plate-classes.json','assets/armor-front.svg','assets/armor-back.svg'].map(url=>fetch(url)));
-  if(responses.some(response=>!response.ok))throw Error('Could not load chart data');
-  data=await responses[0].json();
-  plates=await responses[1].json();
-  masters={front:new DOMParser().parseFromString(await responses[2].text(),'image/svg+xml').documentElement,back:new DOMParser().parseFromString(await responses[3].text(),'image/svg+xml').documentElement};
+  const embedded=globalThis.__TARKOV_RELEASE__;
+  if(embedded){
+    data=embedded.data;
+    plates=embedded.plates;
+    masters={front:new DOMParser().parseFromString(embedded.masters.front,'image/svg+xml').documentElement,back:new DOMParser().parseFromString(embedded.masters.back,'image/svg+xml').documentElement};
+  }else{
+    const responses=await Promise.all(['data/armor.json','data/plate-classes.json','assets/armor-front.svg','assets/armor-back.svg'].map(url=>fetch(url)));
+    if(responses.some(response=>!response.ok))throw Error('Could not load chart data');
+    data=await responses[0].json();
+    plates=await responses[1].json();
+    masters={front:new DOMParser().parseFromString(await responses[2].text(),'image/svg+xml').documentElement,back:new DOMParser().parseFromString(await responses[3].text(),'image/svg+xml').documentElement};
+  }
   $('#date').textContent=new Date(data.fetchedAt).toLocaleDateString();
   $('#classes').innerHTML=['all',6,5,4,3,2,1].map(cls=>`<button data-class="${cls}" class="${cls==='all'?'active':''}">${cls==='all'?'ALL CLASSES':`CLASS ${cls}`}</button>`).join('');
   $('#classes').onclick=event=>{const button=event.target.closest('button');if(!button)return;active=button.dataset.class;document.querySelectorAll('.classes button').forEach(item=>item.classList.toggle('active',item===button));render()};
   ['search','category','sort'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',render));
-  $('#export').onclick=()=>{const params=new URLSearchParams({category:$('#category').value,sort:$('#sort').value,search:$('#search').value,cls:active});location.href=`/exports/armor.svg?${params}`};
+  $('#export').onclick=()=>{
+    const category=$('#category').value;
+    if(embedded){
+      const blob=new Blob([embedded.charts[category]],{type:'image/svg+xml'}),link=document.createElement('a');
+      link.href=URL.createObjectURL(blob);
+      link.download=`${category==='armor'?'body-armor':category==='rig'?'armored-rigs':'armor-and-rigs'}.svg`;
+      link.click();
+      setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+      return;
+    }
+    const params=new URLSearchParams({category,sort:$('#sort').value,search:$('#search').value,cls:active});
+    location.href=`/exports/armor.svg?${params}`;
+  };
   render();
 }
 init().catch(error=>{$('#chart').innerHTML=`<div class="empty">Could not load armor data: ${safe(error.message)}</div>`});

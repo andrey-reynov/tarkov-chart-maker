@@ -1,4 +1,5 @@
 node_modules/
+release/
 work/
 outputs/*.zip
 outputs/*-detail.png
@@ -6,4 +7,3 @@ outputs/*-preview.png
 *.log
 .DS_Store
 Thumbs.db
-
