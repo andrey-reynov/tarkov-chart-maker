@@ -1,0 +1,762 @@
+{
+  "source": "Escape from Tarkov Wiki default plate tables and Tarkov.dev item IDs",
+  "fetchedAt": "2026-09-22T15:15:00.098Z",
+  "items": {
+    "/armor/crye-precision-avs-plate-carrier-ranger-green": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b43-zabralo-sh-body-armor-emr": {
+      "front": 6,
+      "back": 6,
+      "side": 6,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/paca-soft-armor": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/bnti-module-3m-body-armor": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/ana-tactical-m2-plate-carrier-od-green": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/mf-untar-body-armor": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/bnti-gzhel-k-body-armor": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/511-tactical-tactec-plate-carrier-ranger-green": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/iotv-gen4-body-armor-full-protection-kit-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/iotv-gen4-body-armor-assault-kit-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/iotv-gen4-body-armor-high-mobility-kit-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/bnti-kirasa-n-body-armor": {
+      "front": 3,
+      "back": 3,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b5-16-zh-86-uley-armored-rig-khaki": {
+      "front": null,
+      "back": 2,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b5-15-zh-86-uley-armored-rig-flora": {
+      "front": null,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b13-assault-armor-flora": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b13-assault-armor-emr": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b13-m-assault-armor-killa-edition": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b23-2-body-armor-mountain-flora": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b23-1-body-armor-emr": {
+      "front": 3,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/bnti-zhuk-body-armor-press": {
+      "front": 3,
+      "back": 3,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/bnti-zhuk-body-armor-emr": {
+      "front": 6,
+      "back": 6,
+      "side": 6,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/highcom-trooper-tfo-body-armor-multicam": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/ana-tactical-m1-plate-carrier-od-green": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/wartech-tv-110-plate-carrier-coyote": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-redut-m-body-armor": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/fort-redut-t5-body-armor-smog": {
+      "front": 5,
+      "back": 5,
+      "side": 6,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b3tm-01-armored-rig-khaki": {
+      "front": null,
+      "back": 2,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/ars-arma-a18-skanda-plate-carrier-multicam": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b2-body-armor-flora": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/lbt-6094a-slick-plate-carrier-black": {
+      "front": 6,
+      "back": 6,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/ars-arma-cpc-mod1-plate-carrier-a-tacs-fg": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-defender-2-body-armor": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/npp-klass-korund-vm-body-armor-black": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/511-tactical-hexgrid-plate-carrier": {
+      "front": 6,
+      "back": 6,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/lbt-6094a-slick-plate-carrier-coyote-tan": {
+      "front": 6,
+      "back": 6,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/lbt-6094a-slick-plate-carrier-olive-drab": {
+      "front": 6,
+      "back": 6,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/paca-soft-armor-rivals-edition": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/nfm-thor-concealable-reinforced-vest-body-armor": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/crye-precision-avs-plate-carrier-tagilla-edition": {
+      "front": 6,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/nfm-thor-integrated-carrier-body-armor": {
+      "front": 6,
+      "back": 6,
+      "side": 6,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/cqc-osprey-mk4a-plate-carrier-protection-mtp": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/cqc-osprey-mk4a-plate-carrier-assault-mtp": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/eagle-industries-mmac-plate-carrier-ranger-green": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/first-spear-strandhogg-plate-carrier-ranger-green": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/ss-precision-plateframe-plate-carrier-goons-edition": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/crye-precision-cpc-plate-carrier-goons-edition": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/tasmanian-tiger-sk-plate-carrier-multicam-black": {
+      "front": 6,
+      "back": 6,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/npp-klass-bagariy-plate-carrier-emr": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/eclipse-rbav-af-plate-carrier-ranger-green": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/drd-body-armor": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/hexatac-hpc-plate-carrier-multicam-black": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/shellback-tactical-banshee-plate-carrier-a-tacs-au": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/wartech-tv-115-plate-carrier-olive-drab": {
+      "front": 3,
+      "back": 3,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/eagle-allied-industries-mbss-plate-carrier-coyote-brown": {
+      "front": 3,
+      "back": 3,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/interceptor-otv-body-armor-ucp": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/npp-klass-kora-kulon-body-armor-black": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/npp-klass-kora-kulon-body-armor-emr": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/stich-profi-stich-defense-mod2-plate-carrier-multicam": {
+      "front": 6,
+      "back": 6,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/tasmanian-tiger-plate-carrier-mkiii-coyote-brown": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/stich-profi-plate-carrier-v2-black": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b13-m-assault-armor-christmas-edition": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/hexatac-hpc-plate-carrier-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/bnti-kirasa-n-body-armor-green": {
+      "front": 3,
+      "back": 3,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/fort-redut-m-body-armor-sk-woodland": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/highcom-trooper-tfo-body-armor-coyote": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/crye-precision-avs-plate-carrier-multicam": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/511-tactical-tactec-plate-carrier-storm": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/spiritus-systems-lv-119-plate-carrier-black-division-v1": {
+      "front": 6,
+      "back": 3,
+      "side": 4,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/ferro-concepts-fcpc-v5-plate-carrier-black-division": {
+      "front": 5,
+      "back": 3,
+      "side": 4,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/spiritus-systems-lv-119-plate-carrier-black-division-v2": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/first-spear-siege-r-optimized-mass-plate-carrier-black-division": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b45-body-armor-emr": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/6b45-armored-rig-general-purpose-emr": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b45-armored-rig-medic-emr": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/6b45-armored-rig-assault-emr": {
+      "front": 6,
+      "back": 6,
+      "side": 6,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/first-spear-strandhogg-plate-carrier-abupat": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/nfm-thor-concealable-reinforced-vest-body-armor-head-eyes": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/interceptor-otv-body-armor-woodland": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/npp-klass-korund-vm-body-armor-kamysh": {
+      "front": 5,
+      "back": 5,
+      "side": 5,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/stich-profi-plate-carrier-v2-marpat-woodland": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/crye-precision-jpc-plate-carrier-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/tac-kek-jaypc-plate-carrier-black": {
+      "front": 1,
+      "back": 1,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/tac-kek-jaypc-plate-carrier-od-green": {
+      "front": 1,
+      "back": 1,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/ana-tactical-m2-plate-carrier-multicam-alpine": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/wartech-tv-115-plate-carrier-black": {
+      "front": 3,
+      "back": 3,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-defender-2-body-armor-flecktarn": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/fort-redut-m-body-armor-prisoner-of-the-arena": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/fort-redut-m-body-armor-black": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/stich-profi-plate-carrier-v2-a-tacs-fg": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/stich-profi-plate-carrier-v2-coyote": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-gladiator-s-plate-carrier-death-is-inevitable": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-gladiator-s-plate-carrier-viking": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-gladiator-s-plate-carrier-lightweight-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-gladiator-s-plate-carrier-multicam": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/first-spear-strandhogg-plate-carrier-multicam-black": {
+      "front": 4,
+      "back": 4,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/fort-gladiator-s-plate-carrier-gray": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Armor_vests"
+    },
+    "/armor/spiritus-systems-lv-119-plate-carrier-multicam-black": {
+      "front": 5,
+      "back": 5,
+      "side": null,
+      "status": "verified",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chest_rigs"
+    },
+    "/armor/ana-tactical-m2-plate-carrier-a-tacs-ix": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/ana-tactical-m2-plate-carrier-a-tacs-au-x": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/ana-tactical-m1-plate-carrier-emr": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/blue-force-gear-plateminus-v2-plate-carrier-wolf-gray": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/blue-force-gear-plateminus-v2-plate-carrier-scourge": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/blue-force-gear-plateminus-v2-plate-carrier-coyote-brown": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/blue-force-gear-plateminus-v2-plate-carrier-multicam": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/stich-profi-stich-defense-mod2-plate-carrier-cleanup-crew": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/stich-profi-stich-defense-mod2-plate-carrier-a-tacs-fg": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/blue-force-gear-plateminus-v2-body-armor-coyote-brown": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    },
+    "/armor/blue-force-gear-plateminus-v2-body-armor-wolf-gray": {
+      "front": null,
+      "back": null,
+      "side": null,
+      "status": "unknown",
+      "source": null
+    }
+  }
+}
