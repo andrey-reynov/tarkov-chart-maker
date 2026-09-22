@@ -34,7 +34,7 @@ npm run serve
 
 Open `http://localhost:4173` for the searchable browser view. Search is typo tolerant and matches partial names, variants, and acquisition sources even when the query does not begin with the first word.
 
-`npm run release` creates a ready-to-share package in `release/`: one self-contained offline HTML website, three full PNG charts, per-class PNG charts, and a ZIP containing the complete set. The HTML embeds all data, item artwork, coverage masters, and SVG exports, so it opens directly without a local server or internet connection.
+`npm run release` creates a ready-to-share package in `release/`: one self-contained offline HTML website, three full PNG charts, per-class PNG charts, and a ZIP containing the complete set. The HTML embeds all data, item artwork, coverage masters, and SVG exports, so it opens directly without a local server or internet connection. The ZIP additionally preserves every item PNG under `sources/images/`, plus the saved armor data, plate data, and editable coverage SVG masters.
 
 ## Sources
 

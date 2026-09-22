@@ -8,9 +8,10 @@ const require=createRequire(import.meta.url);
 let sharp;
 try{sharp=require('sharp')}catch{sharp=require('C:/Users/drop/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp')}
 
-const releaseDir='release',splitDir=path.join(releaseDir,'charts-by-class');
+const releaseDir='release',splitDir=path.join(releaseDir,'charts-by-class'),sourceDir=path.join(releaseDir,'sources'),imageSourceDir=path.join(sourceDir,'images');
 fs.rmSync(releaseDir,{recursive:true,force:true});
 fs.mkdirSync(splitDir,{recursive:true});
+fs.mkdirSync(imageSourceDir,{recursive:true});
 
 const sourceData=JSON.parse(fs.readFileSync('data/armor.json','utf8'));
 const embeddedData=structuredClone(sourceData);
@@ -18,6 +19,14 @@ for(const item of embeddedData.items){
   const iconPath='.'+item.localIcon;
   item.localIcon=`data:image/png;base64,${fs.readFileSync(iconPath).toString('base64')}`;
 }
+
+for(const file of fs.readdirSync('assets/icons')){
+  if(file.toLowerCase().endsWith('.png'))fs.copyFileSync(path.join('assets/icons',file),path.join(imageSourceDir,file));
+}
+fs.copyFileSync('data/armor.json',path.join(sourceDir,'armor.json'));
+fs.copyFileSync('data/plate-classes.json',path.join(sourceDir,'plate-classes.json'));
+fs.copyFileSync('assets/armor-front.svg',path.join(sourceDir,'armor-front.svg'));
+fs.copyFileSync('assets/armor-back.svg',path.join(sourceDir,'armor-back.svg'));
 
 const categoryFiles={armor:'body-armor',rig:'armored-rigs',all:'armor-and-rigs'};
 const charts={};
@@ -48,7 +57,7 @@ let html=fs.readFileSync('index.html','utf8')
   .replace('<script type="module" src="app.js"></script>',`<script>globalThis.__TARKOV_RELEASE__=${json};</script><script>${app}</script>`);
 fs.writeFileSync(path.join(releaseDir,'tarkov-armor-chart.html'),html);
 
-const readme=`TARKOV ARMOR CHARTS\r\n\r\nOpen tarkov-armor-chart.html in a modern browser. It is a complete offline website and does not require a server or internet connection.\r\n\r\nThe three PNG files are full charts. charts-by-class contains smaller screenshots for individual armor classes.\r\n\r\nGenerated ${new Date().toISOString()} from the saved project data.\r\n`;
+const readme=`TARKOV ARMOR CHARTS\r\n\r\nOpen tarkov-armor-chart.html in a modern browser. It is a complete offline website and does not require a server or internet connection. Item artwork is embedded directly in the HTML.\r\n\r\nThe three PNG files are full charts. charts-by-class contains smaller screenshots for individual armor classes.\r\n\r\nsources/images contains separate copies of all item PNG artwork. The sources folder also contains the saved armor data, plate data, and editable front/back coverage SVG files.\r\n\r\nGenerated ${new Date().toISOString()} from the saved project data.\r\n`;
 fs.writeFileSync(path.join(releaseDir,'README.txt'),readme);
 
 const crcTable=Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;return c>>>0});
@@ -77,3 +86,4 @@ for(const file of fs.readdirSync(releaseDir,{withFileTypes:true})){
   if(file.isFile())console.log(`${file.name} ${(fs.statSync(path.join(releaseDir,file.name)).size/1024/1024).toFixed(1)} MB`);
 }
 console.log(`charts-by-class: ${fs.readdirSync(splitDir).length} PNG files`);
+console.log(`sources/images: ${fs.readdirSync(imageSourceDir).length} PNG files`);

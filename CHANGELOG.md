@@ -22,6 +22,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 - Reviewed acquisition override file for event, Arena, quest, and other exceptional availability.
 - Typo-tolerant web search that matches names, variants, and acquisition sources from any position.
 - One-command release builder for a self-contained offline HTML website, full PNG charts, per-class PNG charts, and a ZIP package.
+- Release source archive with separate item PNG artwork, saved armor and plate data, and editable coverage SVG masters.
 
 ### Changed
 
