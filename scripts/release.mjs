@@ -83,7 +83,7 @@ const pages={};
 for(const [key,filename,scriptFile] of [['armor','index.html','app.js'],['helmets','helmets.html','helmets.js'],['ammo','ammo.html','ammo.js']]){
   const fields=key==='armor'?['data','plates','masters','charts','traderIcons']:key==='helmets'?['helmets','helmetMaster','traderIcons']:['ammo','traderIcons'];
   const json=JSON.stringify(Object.fromEntries(fields.map(field=>[field,payload[field]]))).replaceAll('<','\\u003c');
-  let page=fs.readFileSync(filename,'utf8').replace(/<header>[\s\S]*?<\/header>/,'');
+  let page=fs.readFileSync(filename,'utf8').replace(/<header>[\s\S]*?<\/header>/,'<span id="date" hidden></span>');
   page=page.replace('<link rel="stylesheet" href="style.css">',`<style>${css}</style>`);
   page=page.replace('<script src="shared.js"></script>',`<script>globalThis.__TARKOV_RELEASE__=${json};</script><script>${shared.replaceAll('</script>','<\\/script>')}</script>`);
   page=page.replace(`<script src="${scriptFile}"></script>`,`<script>${fs.readFileSync(scriptFile,'utf8').replaceAll('</script>','<\\/script>')}</script>`);
