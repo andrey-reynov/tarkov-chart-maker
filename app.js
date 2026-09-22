@@ -1,4 +1,4 @@
-let data={items:[]},plates={items:{}},masters={},active='all';
+let data={items:[]},plates={items:{}},masters={},traderIcons={},active='all';
 const $=selector=>document.querySelector(selector);
 const plateColors={1:'#C0564E',2:'#CA7050',3:'#D28B4B',4:'#C6A849',5:'#94BE55',6:'#55D275'};
 const safe=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -84,7 +84,7 @@ function render(){
   items.sort((a,b)=>sort==='effective'?(b.effective||0)-(a.effective||0):sort==='weight'?(a.weight??999)-(b.weight??999):sort==='name'?a.name.localeCompare(b.name):b.cls-a.cls||(b.effective||0)-(a.effective||0)||a.name.localeCompare(b.name));
   const groups=[...new Set(items.map(item=>item.cls))].sort((a,b)=>b-a);
   $('#total').textContent=items.length;
-  $('#chart').innerHTML=groups.length?groups.map(cls=>`<section class="group"><div class="group-head"><h2>CLASS ${cls||'UNRATED'}</h2><span class="count">${items.filter(item=>item.cls===cls).length} ITEMS</span><div class="rule"></div></div><div class="table-wrap"><table><thead><tr><th>ITEM</th><th>FRONT / BACK</th><th class="numeric">DUR</th><th class="numeric">EFF. DUR</th><th>DETAILS</th><th>OBTAIN</th></tr></thead><tbody>${items.filter(item=>item.cls===cls).map(item=>{const record=recordFor(item),source=item.acquisition?.source||'Source unavailable';return `<tr><td class="name"><div class="item"><img class="item-icon" src="${safe(item.localIcon||item.iconLink||'')}" alt="" loading="lazy"><div><a class="itemlink" href="${safe(item.link||'#')}" target="_blank" rel="noreferrer">${safe(item.shortName||item.name)}</a><small>${safe(item.variant||item.name)}</small></div></div></td><td class="coverage-cell"><span class="figures">${armorView('front',record)}${armorView('back',record)}</span></td><td class="numeric">${fmt(item.durability)}</td><td class="numeric effective">${fmt(item.effective)}</td><td class="details"><span><b>Material:</b> ${safe(item.material)}</span><span><b>Weight:</b> ${item.weight==null?'—':`${item.weight} kg`}</span><span><b>Speed:</b> ${pct(item.speed)}</span><span><b>Ergo:</b> ${pct(item.ergo)}</span></td><td class="obtain"><b>${safe(source)}</b><span class="price">${item.acquisition?.price?`${item.acquisition.estimated?'~':''}${fmt(item.acquisition.price)} ₽`:'—'}</span></td></tr>`}).join('')}</tbody></table></div></section>`).join(''):'<div class="empty">No close matches. Try fewer letters or another spelling.</div>';
+  $('#chart').innerHTML=groups.length?groups.map(cls=>`<section class="group"><div class="group-head"><h2>CLASS ${cls||'UNRATED'}</h2><span class="count">${items.filter(item=>item.cls===cls).length} ITEMS</span><div class="rule"></div></div><div class="table-wrap"><table><thead><tr><th>ITEM</th><th>FRONT / BACK</th><th class="numeric">DUR</th><th class="numeric">EFF. DUR</th><th>DETAILS</th><th>OBTAIN</th></tr></thead><tbody>${items.filter(item=>item.cls===cls).map(item=>{const record=recordFor(item),source=item.acquisition?.source||'Source unavailable';return `<tr><td class="name"><div class="item"><img class="item-icon" src="${safe(item.localIcon||item.iconLink||'')}" alt="" loading="lazy"><div><a class="itemlink" href="${safe(item.link||'#')}" target="_blank" rel="noreferrer">${safe(item.shortName||item.name)}</a><small>${safe(item.variant||item.name)}</small></div></div></td><td class="coverage-cell"><span class="figures">${armorView('front',record)}${armorView('back',record)}</span></td><td class="numeric">${fmt(item.durability)}</td><td class="numeric effective">${fmt(item.effective)}</td><td class="details"><span>⚖ ${item.weight==null?'—':`${item.weight} kg`}</span><span>↗ ${pct(item.speed)} speed</span><span>◈ ${pct(item.ergo)} ergo</span></td><td class="obtain">${TarkovUI.acquisition(item.acquisition,traderIcons)}</td></tr>`}).join('')}</tbody></table></div></section>`).join(''):'<div class="empty">No close matches. Try fewer letters or another spelling.</div>';
   $('#source').textContent=`Source: ${data.source} · ${data.url} · Collected ${new Date(data.fetchedAt).toLocaleString()}`;
 }
 
@@ -94,12 +94,14 @@ async function init(){
     data=embedded.data;
     plates=embedded.plates;
     masters={front:new DOMParser().parseFromString(embedded.masters.front,'image/svg+xml').documentElement,back:new DOMParser().parseFromString(embedded.masters.back,'image/svg+xml').documentElement};
+    traderIcons=embedded.traderIcons||{};
   }else{
-    const responses=await Promise.all(['data/armor.json','data/plate-classes.json','assets/armor-front.svg','assets/armor-back.svg'].map(url=>fetch(url)));
+    const responses=await Promise.all(['data/armor.json','data/plate-classes.json','assets/armor-front.svg','assets/armor-back.svg','data/trader-icons.json'].map(url=>fetch(url)));
     if(responses.some(response=>!response.ok))throw Error('Could not load chart data');
     data=await responses[0].json();
     plates=await responses[1].json();
     masters={front:new DOMParser().parseFromString(await responses[2].text(),'image/svg+xml').documentElement,back:new DOMParser().parseFromString(await responses[3].text(),'image/svg+xml').documentElement};
+    traderIcons=await responses[4].json();
   }
   $('#date').textContent=new Date(data.fetchedAt).toLocaleDateString();
   $('#classes').innerHTML=['all',6,5,4,3,2,1].map(cls=>`<button data-class="${cls}" class="${cls==='all'?'active':''}">${cls==='all'?'ALL CLASSES':`CLASS ${cls}`}</button>`).join('');

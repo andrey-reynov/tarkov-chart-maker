@@ -3,14 +3,16 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {deflateRawSync} from 'node:zlib';
 import {makeChart} from './chart.mjs';
+import {makeHelmetChart,makeAmmoChart} from './gear-chart.mjs';
 
 const require=createRequire(import.meta.url);
 let sharp;
 try{sharp=require('sharp')}catch{sharp=require('C:/Users/drop/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp')}
 
-const releaseDir='release',splitDir=path.join(releaseDir,'charts-by-class'),sourceDir=path.join(releaseDir,'sources'),imageSourceDir=path.join(sourceDir,'images');
+const releaseDir='release',splitDir=path.join(releaseDir,'charts-by-class'),caliberDir=path.join(releaseDir,'charts-by-caliber'),sourceDir=path.join(releaseDir,'sources'),imageSourceDir=path.join(sourceDir,'images');
 fs.rmSync(releaseDir,{recursive:true,force:true});
 fs.mkdirSync(splitDir,{recursive:true});
+fs.mkdirSync(caliberDir,{recursive:true});
 fs.mkdirSync(imageSourceDir,{recursive:true});
 
 const sourceData=JSON.parse(fs.readFileSync('data/armor.json','utf8'));
@@ -23,10 +25,19 @@ for(const item of embeddedData.items){
 for(const file of fs.readdirSync('assets/icons')){
   if(file.toLowerCase().endsWith('.png'))fs.copyFileSync(path.join('assets/icons',file),path.join(imageSourceDir,file));
 }
+fs.mkdirSync(path.join(imageSourceDir,'traders'),{recursive:true});
+for(const file of fs.readdirSync('assets/traders')){
+  if(file.toLowerCase().endsWith('.png'))fs.copyFileSync(path.join('assets/traders',file),path.join(imageSourceDir,'traders',file));
+}
 fs.copyFileSync('data/armor.json',path.join(sourceDir,'armor.json'));
+fs.copyFileSync('data/helmets.json',path.join(sourceDir,'helmets.json'));
+fs.copyFileSync('data/ammo.json',path.join(sourceDir,'ammo.json'));
+fs.copyFileSync('data/trader-icons.json',path.join(sourceDir,'trader-icons.json'));
 fs.copyFileSync('data/plate-classes.json',path.join(sourceDir,'plate-classes.json'));
 fs.copyFileSync('assets/armor-front.svg',path.join(sourceDir,'armor-front.svg'));
 fs.copyFileSync('assets/armor-back.svg',path.join(sourceDir,'armor-back.svg'));
+fs.copyFileSync('assets/helmet-coverage.svg',path.join(sourceDir,'helmet-coverage.svg'));
+fs.copyFileSync('assets/flea.svg',path.join(sourceDir,'flea.svg'));
 
 const categoryFiles={armor:'body-armor',rig:'armored-rigs',all:'armor-and-rigs'};
 const charts={};
@@ -40,24 +51,49 @@ for(const [category,name] of Object.entries(categoryFiles)){
     await sharp(Buffer.from(classSvg)).png().toFile(path.join(splitDir,`${name}-class-${cls}.png`));
   }
 }
+for(const [name,svg] of [['helmets',makeHelmetChart()],['ammo',makeAmmoChart()]])await sharp(Buffer.from(svg)).png().toFile(path.join(releaseDir,`${name}.png`));
+const ammoCalibers=[...new Set(JSON.parse(fs.readFileSync('data/ammo.json','utf8')).items.map(item=>item.caliber))];
+for(const caliber of ammoCalibers){
+  const svg=makeAmmoChart({caliber});
+  await sharp(Buffer.from(svg)).png().toFile(path.join(caliberDir,`${caliber}.png`));
+}
 
+const imageData=relative=>`data:image/${path.extname(relative).slice(1)==='svg'?'svg+xml':'png'};base64,${fs.readFileSync('.'+relative).toString('base64')}`;
+const embedIcons=filename=>{
+  const data=JSON.parse(fs.readFileSync(filename,'utf8'));
+  for(const item of data.items)item.localIcon=imageData(item.localIcon);
+  return data;
+};
+const traderIcons=JSON.parse(fs.readFileSync('data/trader-icons.json','utf8'));
+for(const [name,location] of Object.entries(traderIcons))traderIcons[name]=imageData(location);
+traderIcons['Flea market']=imageData('/assets/flea.svg');
 const payload={
   data:embeddedData,
   plates:JSON.parse(fs.readFileSync('data/plate-classes.json','utf8')),
   masters:{front:fs.readFileSync('assets/armor-front.svg','utf8'),back:fs.readFileSync('assets/armor-back.svg','utf8')},
-  charts
+  charts,
+  helmets:embedIcons('data/helmets.json'),
+  ammo:embedIcons('data/ammo.json'),
+  helmetMaster:fs.readFileSync('assets/helmet-coverage.svg','utf8'),
+  traderIcons
 };
-const json=JSON.stringify(payload).replaceAll('<','\\u003c');
-const css=fs.readFileSync('style.css','utf8');
-const app=fs.readFileSync('app.js','utf8').replaceAll('</script>','<\\/script>');
-let html=fs.readFileSync('index.html','utf8')
-  .replace('<link rel="stylesheet" href="style.css">',`<style>${css}</style>`)
-  .replace('<a href="/coverage.html">Coverage preview</a>','<a class="disabled">Coverage preview</a>')
-  .replace('<a href="/plate-preview.html">Plate preview</a>','<a class="disabled">Plate preview</a>')
-  .replace('<script type="module" src="app.js"></script>',`<script>globalThis.__TARKOV_RELEASE__=${json};</script><script>${app}</script>`);
+const css=fs.readFileSync('style.css','utf8').replace(/^@import[^;]+;/m,'');
+const shared=fs.readFileSync('shared.js','utf8');
+const pages={};
+for(const [key,filename,scriptFile] of [['armor','index.html','app.js'],['helmets','helmets.html','helmets.js'],['ammo','ammo.html','ammo.js']]){
+  const fields=key==='armor'?['data','plates','masters','charts','traderIcons']:key==='helmets'?['helmets','helmetMaster','traderIcons']:['ammo','traderIcons'];
+  const json=JSON.stringify(Object.fromEntries(fields.map(field=>[field,payload[field]]))).replaceAll('<','\\u003c');
+  let page=fs.readFileSync(filename,'utf8').replace(/<header>[\s\S]*?<\/header>/,'');
+  page=page.replace('<link rel="stylesheet" href="style.css">',`<style>${css}</style>`);
+  page=page.replace('<script src="shared.js"></script>',`<script>globalThis.__TARKOV_RELEASE__=${json};</script><script>${shared.replaceAll('</script>','<\\/script>')}</script>`);
+  page=page.replace(`<script src="${scriptFile}"></script>`,`<script>${fs.readFileSync(scriptFile,'utf8').replaceAll('</script>','<\\/script>')}</script>`);
+  pages[key]=page;
+}
+const pageJson=JSON.stringify(pages).replaceAll('<','\\u003c');
+const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tarkov Gear Charts</title><style>body{margin:0;background:#151714;color:#e8e6d9;font:15px Arial,sans-serif}header{display:flex;align-items:center;gap:24px;padding:14px 24px;background:#20231e;border-bottom:1px solid #454c3b}header b{letter-spacing:.12em}nav{display:flex;gap:8px}button{padding:11px 17px;border:1px solid #596149;background:#2a3025;color:#e8e6d9;cursor:pointer;font-weight:bold}button.active{background:#71875b;color:#10150e}iframe{display:block;width:100%;height:calc(100vh - 68px);border:0}@media(max-width:600px){header{display:block}nav{margin-top:12px;flex-wrap:wrap}iframe{height:calc(100vh - 115px)}}</style></head><body><header><b>TARKOV / FIELD GUIDE</b><nav><button data-page="armor" class="active">ARMOR + RIGS</button><button data-page="helmets">HELMETS</button><button data-page="ammo">AMMO</button></nav></header><iframe id="page" title="Tarkov charts"></iframe><script>const pages=${pageJson};const frame=document.querySelector('#page');function select(key){frame.srcdoc=pages[key];document.querySelectorAll('nav button').forEach(button=>button.classList.toggle('active',button.dataset.page===key))}document.querySelector('nav').onclick=event=>{const button=event.target.closest('button[data-page]');if(button)select(button.dataset.page)};select('armor');</script></body></html>`;
 fs.writeFileSync(path.join(releaseDir,'tarkov-armor-chart.html'),html);
 
-const readme=`TARKOV ARMOR CHARTS\r\n\r\nOpen tarkov-armor-chart.html in a modern browser. It is a complete offline website and does not require a server or internet connection. Item artwork is embedded directly in the HTML.\r\n\r\nThe three PNG files are full charts. charts-by-class contains smaller screenshots for individual armor classes.\r\n\r\nsources/images contains separate copies of all item PNG artwork. The sources folder also contains the saved armor data, plate data, and editable front/back coverage SVG files.\r\n\r\nGenerated ${new Date().toISOString()} from the saved project data.\r\n`;
+const readme=`TARKOV GEAR CHARTS\r\n\r\nOpen tarkov-armor-chart.html in a modern browser. Armor, helmets, and ammo work offline. Every item image and trader portrait is embedded in the HTML.\r\n\r\nThe root PNG files are full armor, helmet, and ammo charts. charts-by-class contains armor class charts; charts-by-caliber contains one ammo chart per caliber.\r\n\r\nsources/images contains separate copies of item PNG artwork, with trader portraits in sources/images/traders. The sources folder also has the saved data and editable coverage SVG files.\r\n\r\nGenerated ${new Date().toISOString()} from the saved project data.\r\n`;
 fs.writeFileSync(path.join(releaseDir,'README.txt'),readme);
 
 const crcTable=Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;return c>>>0});

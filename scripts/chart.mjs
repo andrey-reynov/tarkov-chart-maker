@@ -13,6 +13,15 @@ const fuzzyMatch=(value,query)=>{const text=normalize(value),needle=normalize(qu
 export function makeChart(options={}) {
   const data=JSON.parse(fs.readFileSync('data/armor.json','utf8'));
   const plates=JSON.parse(fs.readFileSync('data/plate-classes.json','utf8'));
+  const traderIcons=JSON.parse(fs.readFileSync('data/trader-icons.json','utf8'));
+  const iconData=new Map();
+  const purchaseIcon=source=>{
+    const trader=source.match(/^(?:Barter · )?(.+?) LL\d+$/)?.[1];
+    const path=trader?traderIcons[trader]:source==='Flea market'?'/assets/flea.svg':null;
+    if(!path)return null;
+    if(!iconData.has(path))iconData.set(path,`data:image/${path.endsWith('.svg')?'svg+xml':'png'};base64,${fs.readFileSync('.'+path).toString('base64')}`);
+    return iconData.get(path);
+  };
   const eff=item=>item.effective||Math.round((item.properties.durability||0)/(item.properties.material?.destructibility||1));
   const items=data.items.filter(item=>(!options.category||options.category==='all'||item.category===options.category)
     &&(!options.cls||options.cls==='all'||Number(item.properties.class)===Number(options.cls))
@@ -46,11 +55,13 @@ export function makeChart(options={}) {
       const variant=variantSlug?.replaceAll('-',' ').toUpperCase();
       const type=item.category==='rig'?'ARMORED RIG':'BODY ARMOR';
       const acquisition=item.acquisition||{source:'Source unavailable',price:null};
-      const obtain=shorten(acquisition.source||'Source unavailable',34);
+      const source=acquisition.source||'Source unavailable';
+      const obtain=shorten(source.startsWith('Barter · ')?`${source.slice(9)} · barter`:source,30);
+      const sellerIcon=purchaseIcon(source);
       const title=esc(variant?`${type} · ${variant}`:options.category==='all'
         ? type
         : shorten(item.link?.split('/').at(-1)?.replaceAll('-',' ')||item.name,52));
-      body+=`<g id="item-${esc(item.id.replace(/[^a-zA-Z0-9_-]/g,'_'))}" data-item-id="${esc(item.id)}"><rect y="${y}" width="${W}" height="${rowHeight}" fill="${index%2?'#1b221b':'#222a20'}"/><rect y="${y}" width="34" height="${rowHeight}" fill="${classColor}"/><text x="17" y="${y+81}" text-anchor="middle" fill="${classInk}" font-size="24" font-weight="900">${cls}</text><image x="50" y="${y+18}" width="96" height="104" preserveAspectRatio="xMidYMid meet" href="data:image/png;base64,${icon}"/><text x="165" y="${y+64}" class="name">${esc(label)}</text><text x="165" y="${y+87}" class="detail">${title}</text><g transform="translate(505 ${y+15}) scale(2.06)">${armorFigure('front',record,`item-${y}-front`)}</g><g transform="translate(695 ${y+15}) scale(2.06)">${armorFigure('back',record,`item-${y}-back`)}</g><text x="900" y="${y+75}" class="stat">${fmt(item.properties.durability)}</text><text x="1005" y="${y+75}" class="accent">${fmt(eff(item))}</text><text x="1130" y="${y+37}" class="meta"><tspan class="meta-key">Material:&#160;&#160;</tspan>${esc(material)}<tspan x="1130" dy="23" class="meta-key">Weight:&#160;&#160;</tspan>${item.weight==null?'—':item.weight+' kg'}<tspan x="1130" dy="23" class="meta-key">Speed:&#160;&#160;</tspan>${signed(item.speed)}<tspan x="1130" dy="23" class="meta-key">Ergo:&#160;&#160;</tspan>${signed(item.ergo)}</text><text x="1410" y="${y+61}" class="obtain">${esc(obtain)}</text><text x="1410" y="${y+85}" class="obtain-price">${acquisition.price?(acquisition.estimated?'~':'')+fmt(acquisition.price)+' ₽':'—'}</text></g>`;
+      body+=`<g id="item-${esc(item.id.replace(/[^a-zA-Z0-9_-]/g,'_'))}" data-item-id="${esc(item.id)}"><rect y="${y}" width="${W}" height="${rowHeight}" fill="${index%2?'#1b221b':'#222a20'}"/><rect y="${y}" width="34" height="${rowHeight}" fill="${classColor}"/><text x="17" y="${y+81}" text-anchor="middle" fill="${classInk}" font-size="24" font-weight="900">${cls}</text><image x="50" y="${y+18}" width="96" height="104" preserveAspectRatio="xMidYMid meet" href="data:image/png;base64,${icon}"/><text x="165" y="${y+64}" class="name">${esc(label)}</text><text x="165" y="${y+87}" class="detail">${title}</text><g transform="translate(505 ${y+15}) scale(2.06)">${armorFigure('front',record,`item-${y}-front`)}</g><g transform="translate(695 ${y+15}) scale(2.06)">${armorFigure('back',record,`item-${y}-back`)}</g><text x="900" y="${y+75}" class="stat">${fmt(item.properties.durability)}</text><text x="1005" y="${y+75}" class="accent">${fmt(eff(item))}</text><text x="1130" y="${y+49}" class="meta">⚖ ${item.weight==null?'—':item.weight+' kg'}<tspan x="1130" dy="26">↗ ${signed(item.speed)} speed</tspan><tspan x="1130" dy="26">◈ ${signed(item.ergo)} ergo</tspan></text>${sellerIcon?`<image x="1410" y="${y+48}" width="38" height="38" href="${sellerIcon}"/>`:''}<text x="1458" y="${y+61}" class="obtain">${esc(obtain)}</text><text x="1458" y="${y+85}" class="obtain-price">${acquisition.price?(acquisition.estimated?'~':'')+fmt(acquisition.price)+' ₽':'—'}</text></g>`;
       y+=rowHeight;
     }
   }

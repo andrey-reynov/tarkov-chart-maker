@@ -1,12 +1,14 @@
 # Tarkov Chart Maker
 
-Tarkov Chart Maker generates large, editable equipment charts for *Escape from Tarkov*. The current release covers body armor and armored rigs. It combines in-game item artwork, current statistics, default plate classes, and a compact front/back protection diagram.
+Tarkov Chart Maker generates equipment charts for *Escape from Tarkov*. The browser guide has three sections: **Armor + Rigs**, **Helmets**, and **Ammo**. It combines in-game item artwork, statistics, armor coverage, and acquisition information.
 
 The generated deliverables are:
 
 - `outputs/body-armor.png` and `.svg`
 - `outputs/armored-rigs.png` and `.svg`
 - `outputs/armor-and-rigs.png` and `.svg`
+- `outputs/helmets.png` and `.svg`
+- `outputs/ammo.png` and `.svg`
 
 The combined chart groups equipment by armor class from 6 to 1 and orders each class by effective durability. The SVG output remains editable: every armor region has a stable name, and the generator changes its fill according to the recorded protection class.
 
@@ -25,6 +27,7 @@ For manual use:
 ```text
 npm install
 npm run refresh
+npm run refresh:gear
 npm run plates
 npm run images
 npm run export
@@ -34,15 +37,18 @@ npm run serve
 
 Open `http://localhost:4173` for the searchable browser view. Search is typo tolerant and matches partial names, variants, and acquisition sources even when the query does not begin with the first word.
 
-`npm run release` creates a ready-to-share package in `release/`: one self-contained offline HTML website, three full PNG charts, per-class PNG charts, and a ZIP containing the complete set. The HTML embeds all data, item artwork, coverage masters, and SVG exports, so it opens directly without a local server or internet connection. The ZIP additionally preserves every item PNG under `sources/images/`, plus the saved armor data, plate data, and editable coverage SVG masters.
+`npm run release` creates a ready-to-share package in `release/`: one self-contained offline HTML website covering all three sections, full PNG charts for armor, helmets, and ammo, smaller armor-class and ammo-caliber PNGs, and a ZIP containing the complete set. The HTML embeds all data, item artwork, trader portraits, coverage masters, and armor SVG exports, so it opens directly without a local server or internet connection. The ZIP additionally preserves every item PNG under `sources/images/`, trader portraits under `sources/images/traders/`, saved data, and editable coverage SVG masters. Item and source links open their online pages when a connection is available.
 
 ## Sources
 
 - [Tarkov.dev](https://tarkov.dev/) and its [static JSON API](https://json.tarkov.dev/endpoints): item statistics, armor slots, soft armor, prices, and transparent item artwork.
 - [Escape from Tarkov Wiki — Armor vests](https://escapefromtarkov.fandom.com/wiki/Armor_vests): default body-armor plates.
 - [Escape from Tarkov Wiki — Chest rigs](https://escapefromtarkov.fandom.com/wiki/Chest_rigs): default armored-rig plates.
+- [Escape from Tarkov Wiki — Headwear](https://escapefromtarkov.fandom.com/wiki/Headwear): cross-check for protective headwear names and armor classes.
+- [TarkovKit ammo](https://tarkovkit.com/en/ammo): reference for caliber-grouped presentation.
 
 The saved snapshot contains 108 armored items: 49 body armors and 59 armored rigs. Source dates are printed in the generated charts.
+The separate gear snapshot contains 112 classed protective headwear items and 193 ammunition entries. Newer helmets are selected by their helmet armor properties because Tarkov.dev's older `helmet` type tag omits many current variants. Names use the linked Wiki page titles where available.
 
 ## Acquisition reasoning
 
@@ -69,11 +75,15 @@ The diagrams are deliberately schematic. They explain equipment coverage and do 
 - `data/` — saved item and plate data
 - `data/acquisition-overrides.json` — reviewed special acquisition labels
 - `assets/icons/` — locally cached transparent item artwork
+- `assets/traders/` — locally cached trader portraits
+- `data/helmets.json` and `data/ammo.json` — saved headwear and ammo snapshots
 - `assets/armor-front.svg` and `assets/armor-back.svg` — named editable coverage masters
 - `scripts/refresh.mjs` — refresh item data
+- `scripts/refresh-gear.mjs` — refresh helmet, ammo, and trader data and images
 - `scripts/wiki-plates.mjs` — refresh default plate matches
 - `scripts/upgrade-images.mjs` — refresh high-resolution artwork
 - `scripts/chart.mjs` — SVG chart renderer
+- `scripts/gear-chart.mjs` — helmet and ammo SVG chart renderers
 - `scripts/export.mjs` — SVG and PNG export
 - `scripts/release.mjs` — self-contained HTML, PNG set, and ZIP release builder
 

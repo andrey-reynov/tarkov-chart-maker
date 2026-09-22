@@ -12,6 +12,12 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 
 ### Added
 
+- Three-section guide with Armor + Rigs, Helmets, and Ammo tabs; Armor + Rigs is the default view.
+- Helmet coverage from the supplied vector, with top, back, ear, and other protected zones.
+- Caliber-grouped ammo view with a caliber dropdown and class penetration comparison.
+- Full helmet and ammo SVG/PNG exports, with individual ammo-caliber PNGs in the release.
+- Locally cached helmet and ammo artwork, trader portraits, and a square flea-market icon.
+- Offline release copies of all equipment images and trader portraits, with all three guide sections in the single HTML file.
 - Body armor, armored rig, and combined chart generation.
 - Editable SVG and PNG exports with item artwork.
 - Front and back coverage previews for default plates and soft armor regions.
@@ -26,6 +32,10 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 
 ### Changed
 
+- Trader labels now put the trader before “barter”; acquisition icons sit beside names and prices.
+- Helmet refresh selects items by their helmet armor properties, including newer protective headwear lacking the legacy type tag.
+- Gear labels use linked Wiki titles where available, and barter prices for ammunition are estimated per round.
+- Chart details use weight, speed, and ergonomics symbols in place of the Material column.
 - Replaced the four Material, Weight, Speed, and Ergo columns with one compact multiline Details column.
 - Reduced armor previews to approximately 92% while preserving row height.
 - Tightened equipment spacing to devote more room to useful data.
