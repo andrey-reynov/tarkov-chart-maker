@@ -33,6 +33,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 ### Changed
 
 - Replaced the helmet coverage icon with owner-drawn front and back SVGs; shell, ears, eyes, face/jaw, throat, and back neck can now color independently where the data supports them.
+- Kept the lower back-of-head shape and collar neutral; only the separate throat and back-neck regions receive helmet coverage colors.
 - Trader labels now put the trader before “barter”; acquisition icons sit beside names and prices.
 - Helmet refresh selects items by their helmet armor properties, including newer protective headwear lacking the legacy type tag.
 - Gear labels use linked Wiki titles where available, and barter prices for ammunition are estimated per round.
