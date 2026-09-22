@@ -36,7 +36,8 @@ fs.copyFileSync('data/trader-icons.json',path.join(sourceDir,'trader-icons.json'
 fs.copyFileSync('data/plate-classes.json',path.join(sourceDir,'plate-classes.json'));
 fs.copyFileSync('assets/armor-front.svg',path.join(sourceDir,'armor-front.svg'));
 fs.copyFileSync('assets/armor-back.svg',path.join(sourceDir,'armor-back.svg'));
-fs.copyFileSync('assets/helmet-coverage.svg',path.join(sourceDir,'helmet-coverage.svg'));
+fs.copyFileSync('assets/helmet-front.svg',path.join(sourceDir,'helmet-front.svg'));
+fs.copyFileSync('assets/helmet-back.svg',path.join(sourceDir,'helmet-back.svg'));
 fs.copyFileSync('assets/flea.svg',path.join(sourceDir,'flea.svg'));
 
 const categoryFiles={armor:'body-armor',rig:'armored-rigs',all:'armor-and-rigs'};
@@ -74,14 +75,14 @@ const payload={
   charts,
   helmets:embedIcons('data/helmets.json'),
   ammo:embedIcons('data/ammo.json'),
-  helmetMaster:fs.readFileSync('assets/helmet-coverage.svg','utf8'),
+  helmetMasters:{front:fs.readFileSync('assets/helmet-front.svg','utf8'),back:fs.readFileSync('assets/helmet-back.svg','utf8')},
   traderIcons
 };
 const css=fs.readFileSync('style.css','utf8').replace(/^@import[^;]+;/m,'');
 const shared=fs.readFileSync('shared.js','utf8');
 const pages={};
 for(const [key,filename,scriptFile] of [['armor','index.html','app.js'],['helmets','helmets.html','helmets.js'],['ammo','ammo.html','ammo.js']]){
-  const fields=key==='armor'?['data','plates','masters','charts','traderIcons']:key==='helmets'?['helmets','helmetMaster','traderIcons']:['ammo','traderIcons'];
+  const fields=key==='armor'?['data','plates','masters','charts','traderIcons']:key==='helmets'?['helmets','helmetMasters','traderIcons']:['ammo','traderIcons'];
   const json=JSON.stringify(Object.fromEntries(fields.map(field=>[field,payload[field]]))).replaceAll('<','\\u003c');
   let page=fs.readFileSync(filename,'utf8').replace(/<header>[\s\S]*?<\/header>/,'<span id="date" hidden></span>');
   page=page.replace('<link rel="stylesheet" href="style.css">',`<style>${css}</style>`);

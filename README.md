@@ -76,6 +76,7 @@ The diagrams are deliberately schematic. They explain equipment coverage and do 
 - `data/acquisition-overrides.json` — reviewed special acquisition labels
 - `assets/icons/` — locally cached transparent item artwork
 - `assets/traders/` — locally cached trader portraits
+- `assets/helmet-front.svg` and `assets/helmet-back.svg` — named editable helmet coverage masters supplied by the project owner
 - `data/helmets.json` and `data/ammo.json` — saved headwear and ammo snapshots
 - `assets/armor-front.svg` and `assets/armor-back.svg` — named editable coverage masters
 - `scripts/refresh.mjs` — refresh item data

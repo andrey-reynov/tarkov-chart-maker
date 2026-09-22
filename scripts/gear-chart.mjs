@@ -22,10 +22,18 @@ function seller(acquisition,y,x){
 function frame(title,sub,columns,body,height,footerY){
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="${height}" viewBox="0 0 1800 ${height}"><style>text{font-family:Arial,sans-serif}.title{font-size:47px;font-weight:900;fill:#e9eee6}.sub{font-size:16px;fill:#b9c4b5}.head{font-size:14px;font-weight:700;fill:#c3d09f}.group{font-size:25px;font-weight:900;fill:#e7edde}.count{font-size:15px;fill:#b5c3b0}.name{font-size:20px;font-weight:800;fill:#e9ede4}.small{font-size:14px;fill:#b4c2b0}.value{font-size:19px;font-weight:700;fill:#e0c677}.seller{font-size:16px;font-weight:700;fill:#dce5d5}.price{font-size:15px;fill:#e0c677}.foot{font-size:14px;fill:#aebcad}</style><rect width="100%" height="100%" fill="#151b16"/><rect width="100%" height="8" fill="#a2bd76"/><text x="28" y="70" class="title">${esc(title)}</text><text x="29" y="101" class="sub">${esc(sub)}</text><rect y="120" width="1800" height="42" fill="#34412f"/>${columns.map(([label,x])=>`<text x="${x}" y="148" class="head">${esc(label)}</text>`).join('')}${body}<rect y="${footerY}" width="1800" height="${height-footerY}" fill="#283226"/><text x="28" y="${footerY+37}" class="foot">Unofficial fan project. Escape from Tarkov and its game content and imagery © Battlestate Games and their respective rights holders.</text><text x="28" y="${footerY+67}" class="foot">Generated from Tarkov.dev data; game values can change. The live game is authoritative.</text></svg>`;
 }
-const helmetPaths=[...fs.readFileSync('assets/helmet-coverage.svg','utf8').matchAll(/<g data-part="([^"]+)">(<path[^>]+\/>)*<\/g>/g)];
-function helmetShape(item,y){
-  const parts=helmetPaths.map(([,part,markup])=>`<g id="${item.id}-${part}" data-part="${part}">${markup.replace('fill="#434D45"',`fill="${colors[item[part]]||'#434D45'}"`).replace('stroke="#A9B7A4"',`stroke="${item[part]?'#1d281e':'#A9B7A4'}"`)}</g>`).join('');
-  return `<g transform="translate(690 ${y+20}) scale(2.28)">${parts}</g>`;
+const helmetMasters=Object.fromEntries(['front','back'].map(view=>[view,[...fs.readFileSync(`assets/helmet-${view}.svg`,'utf8').matchAll(/<g id="[^"]+" data-part="([^"]+)">([\s\S]*?)<\/g>/g)]]));
+function helmetLevel(item,part){
+  if(part.startsWith('ears-'))return item.ears;
+  if(part==='face-jaw')return item.face&&item.face===item.jaw?item.face:null;
+  return {top:item.top,back:item.back,eyes:item.eyes,throat:item.throat,'neck-back':item.backNeck}[part]||null;
+}
+function helmetShape(item,view,y,x){
+  const parts=helmetMasters[view].map(([,part,markup])=>{
+    const level=helmetLevel(item,part);
+    return `<g id="${item.id}-${view}-${part}" data-part="${part}">${markup.replace('fill="#434D45"',`fill="${colors[level]||'#434D45'}"`).replace('stroke="#A9B7A4"',`stroke="${level?'#1d281e':'#A9B7A4'}"`)}</g>`;
+  }).join('');
+  return `<g transform="translate(${x} ${y+12}) scale(2.30)">${parts}</g><text x="${x+32}" y="${y+103}" text-anchor="middle" class="head">${view.toUpperCase()}</text>`;
 }
 export function makeHelmetChart(){
   const data=JSON.parse(fs.readFileSync('data/helmets.json','utf8'));
@@ -36,8 +44,9 @@ export function makeHelmetChart(){
     const group=items.filter(item=>item.class===cls),color=colors[cls];
     body+=`<rect y="${y}" width="1800" height="46" fill="#2b3527"/><rect y="${y}" width="32" height="46" fill="${color}"/><text x="50" y="${y+31}" class="group">CLASS ${cls}<tspan dx="24" class="count">${group.length} ${group.length===1?'ITEM':'ITEMS'}</tspan></text>`;y+=46;
     for(const [index,item] of group.entries()){
-      const other=[['Eyes',item.eyes],['Jaw',item.jaw],['Face',item.face],['Neck',item.neck]].filter(([,value])=>value).map(([name,value])=>`${name} ${value}`).join('  ·  ')||'No additional zones';
-      body+=`<g id="helmet-${esc(item.id)}"><rect y="${y}" width="1800" height="112" fill="${index%2?'#1b221b':'#222a20'}"/><rect y="${y}" width="32" height="112" fill="${color}"/><image x="52" y="${y+11}" width="88" height="88" preserveAspectRatio="xMidYMid meet" href="${image(item.localIcon)}"/><text x="155" y="${y+57}" class="name">${esc(cut(item.name,47))}</text>${helmetShape(item,y)}<text x="900" y="${y+46}" class="small">${esc(cut(other,39))}</text><text x="900" y="${y+73}" class="small">Top ${item.top||'—'} · Back ${item.back||'—'} · Ears ${item.ears||'—'}</text><text x="1240" y="${y+59}" class="value">${fmt(item.durability)}</text><text x="1330" y="${y+32}" class="small">⚖ ${fmt(item.weight)} kg<tspan x="1330" dy="22">↗ ${item.speed}% speed</tspan><tspan x="1330" dy="22">◈ ${item.ergo}% ergo</tspan><tspan x="1330" dy="22">Sound: ${esc(item.deafening||'—')}</tspan></text>${seller(item.acquisition,y,1530)}</g>`;
+      const faceZones=[['Eyes',item.eyes],['Face',item.face],['Jaw',item.jaw]].filter(([,value])=>value).map(([name,value])=>`${name} ${value}`).join(' · ')||'No face armor';
+      const neckZones=[['Throat',item.throat],['Back neck',item.backNeck]].filter(([,value])=>value).map(([name,value])=>`${name} ${value}`).join(' · ')||'No neck armor';
+      body+=`<g id="helmet-${esc(item.id)}"><rect y="${y}" width="1800" height="112" fill="${index%2?'#1b221b':'#222a20'}"/><rect y="${y}" width="32" height="112" fill="${color}"/><image x="52" y="${y+11}" width="88" height="88" preserveAspectRatio="xMidYMid meet" href="${image(item.localIcon)}"/><text x="155" y="${y+57}" class="name">${esc(cut(item.name,47))}</text>${helmetShape(item,'front',y,680)}${helmetShape(item,'back',y,770)}<text x="900" y="${y+39}" class="small">${esc(faceZones)}</text><text x="900" y="${y+64}" class="small">${esc(neckZones)}</text><text x="900" y="${y+89}" class="small">Top ${item.top||'—'} · Back ${item.back||'—'} · Ears ${item.ears||'—'}</text><text x="1240" y="${y+59}" class="value">${fmt(item.durability)}</text><text x="1330" y="${y+32}" class="small">⚖ ${fmt(item.weight)} kg<tspan x="1330" dy="22">↗ ${item.speed}% speed</tspan><tspan x="1330" dy="22">◈ ${item.ergo}% ergo</tspan><tspan x="1330" dy="22">Sound: ${esc(item.deafening||'—')}</tspan></text>${seller(item.acquisition,y,1530)}</g>`;
       y+=112;
     }
     body+=`<rect y="${y}" width="1800" height="40" fill="#34412f"/>${columns.map(([label,x])=>`<text x="${x}" y="${y+26}" class="head">${label}</text>`).join('')}`;y+=40;
