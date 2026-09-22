@@ -1,10 +1,11 @@
 {
   "source": "Tarkov.dev static JSON API",
   "url": "https://json.tarkov.dev/regular/items",
-  "fetchedAt": "2026-09-22T15:14:58.700Z",
+  "fetchedAt": "2026-09-22T17:55:44.129Z",
   "items": [
     {
       "id": "/armor/crye-precision-avs-plate-carrier-ranger-green",
+      "tarkovId": "544a5caa4bdc2d1a388b4568",
       "name": "AVS",
       "shortName": "AVS",
       "iconLink": "https://assets.tarkov.dev/544a5caa4bdc2d1a388b4568-icon.webp",
@@ -17,7 +18,12 @@
       "speed": -2,
       "turn": 0,
       "ergo": 0,
-      "price": 98795,
+      "price": 96095,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 96095
+      },
       "properties": {
         "class": 4,
         "durability": 212,
@@ -153,6 +159,7 @@
     },
     {
       "id": "/armor/6b43-zabralo-sh-body-armor-emr",
+      "tarkovId": "545cdb794bdc2d3a198b456a",
       "name": "6B43",
       "shortName": "6B43",
       "iconLink": "https://assets.tarkov.dev/545cdb794bdc2d3a198b456a-icon.webp",
@@ -166,6 +173,13 @@
       "turn": -5.5,
       "ergo": -7,
       "price": 113046,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Prapor LL4",
+        "price": 114429,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 6,
         "durability": 510,
@@ -440,6 +454,7 @@
     },
     {
       "id": "/armor/paca-soft-armor",
+      "tarkovId": "5648a7494bdc2d9d488b4583",
       "name": "PACA",
       "shortName": "PACA",
       "iconLink": "https://assets.tarkov.dev/5648a7494bdc2d9d488b4583-icon.webp",
@@ -452,7 +467,13 @@
       "speed": -1,
       "turn": 0,
       "ergo": -1,
-      "price": 37228,
+      "price": 37149,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Ragman LL1",
+        "price": 36506,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 2,
         "durability": 100,
@@ -553,6 +574,7 @@
     },
     {
       "id": "/armor/bnti-module-3m-body-armor",
+      "tarkovId": "59e7635f86f7742cbf2c1095",
       "name": "Module-3M",
       "shortName": "Module-3M",
       "iconLink": "https://assets.tarkov.dev/59e7635f86f7742cbf2c1095-icon.webp",
@@ -565,7 +587,13 @@
       "speed": -1,
       "turn": -1,
       "ergo": 0,
-      "price": 30322,
+      "price": 30320,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Skier LL1",
+        "price": 30893,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 2,
         "durability": 80,
@@ -666,6 +694,7 @@
     },
     {
       "id": "/armor/ana-tactical-m2-plate-carrier-od-green",
+      "tarkovId": "5ab8dced86f774646209ec87",
       "name": "ANA M2",
       "shortName": "ANA M2",
       "iconLink": "https://assets.tarkov.dev/5ab8dced86f774646209ec87-icon.webp",
@@ -678,7 +707,12 @@
       "speed": -2,
       "turn": 0,
       "ergo": 0,
-      "price": 67606,
+      "price": 67580,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 67580
+      },
       "properties": {
         "class": 4,
         "durability": 206,
@@ -867,6 +901,7 @@
     },
     {
       "id": "/armor/mf-untar-body-armor",
+      "tarkovId": "5ab8e4ed86f7742d8e50c7fa",
       "name": "MF-UN",
       "shortName": "MF-UN",
       "iconLink": "https://assets.tarkov.dev/5ab8e4ed86f7742d8e50c7fa-icon.webp",
@@ -879,7 +914,13 @@
       "speed": -3,
       "turn": -1,
       "ergo": -2,
-      "price": 47554,
+      "price": 49832,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Peacekeeper LL2",
+        "price": 49217,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 3,
         "durability": 100,
@@ -980,6 +1021,7 @@
     },
     {
       "id": "/armor/bnti-gzhel-k-body-armor",
+      "tarkovId": "5ab8e79e86f7742d8b372e78",
       "name": "Gzhel-K",
       "shortName": "Gzhel-K",
       "iconLink": "https://assets.tarkov.dev/5ab8e79e86f7742d8b372e78-icon.webp",
@@ -992,7 +1034,14 @@
       "speed": -1.5,
       "turn": 0,
       "ergo": 0,
-      "price": 128954,
+      "price": 130019,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL3",
+        "price": 80713,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 259,
@@ -1187,6 +1236,7 @@
     },
     {
       "id": "/armor/511-tactical-tactec-plate-carrier-ranger-green",
+      "tarkovId": "5b44cad286f77402a54ae7e5",
       "name": "TacTec",
       "shortName": "TacTec",
       "iconLink": "https://assets.tarkov.dev/5b44cad286f77402a54ae7e5-icon.webp",
@@ -1199,7 +1249,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": 0,
-      "price": 33628,
+      "price": 33695,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 33695
+      },
       "properties": {
         "class": 5,
         "durability": 170,
@@ -1312,6 +1367,7 @@
     },
     {
       "id": "/armor/iotv-gen4-body-armor-full-protection-kit-multicam",
+      "tarkovId": "5b44cd8b86f774503d30cba2",
       "name": "Gen4 Full",
       "shortName": "Gen4 Full",
       "iconLink": "https://assets.tarkov.dev/5b44cd8b86f774503d30cba2-icon.webp",
@@ -1324,7 +1380,14 @@
       "speed": -7,
       "turn": -4,
       "ergo": -6,
-      "price": 242186,
+      "price": 239419,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL4",
+        "price": 98770,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 398,
@@ -1614,6 +1677,7 @@
     },
     {
       "id": "/armor/iotv-gen4-body-armor-assault-kit-multicam",
+      "tarkovId": "5b44cf1486f77431723e3d05",
       "name": "Gen4 Assault",
       "shortName": "Gen4 Assault",
       "iconLink": "https://assets.tarkov.dev/5b44cf1486f77431723e3d05-icon.webp",
@@ -1626,7 +1690,12 @@
       "speed": -5,
       "turn": -4,
       "ergo": -5,
-      "price": 110934,
+      "price": 121626,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 121626
+      },
       "properties": {
         "class": 5,
         "durability": 362,
@@ -1874,6 +1943,7 @@
     },
     {
       "id": "/armor/iotv-gen4-body-armor-high-mobility-kit-multicam",
+      "tarkovId": "5b44d0de86f774503d30cba8",
       "name": "Gen4 HMK",
       "shortName": "Gen4 HMK",
       "iconLink": "https://assets.tarkov.dev/5b44d0de86f774503d30cba8-icon.webp",
@@ -1886,7 +1956,12 @@
       "speed": -2,
       "turn": -4,
       "ergo": -4,
-      "price": 59727,
+      "price": 57528,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 57528
+      },
       "properties": {
         "class": 5,
         "durability": 320,
@@ -2134,6 +2209,7 @@
     },
     {
       "id": "/armor/bnti-kirasa-n-body-armor",
+      "tarkovId": "5b44d22286f774172b0c9de8",
       "name": "Kirasa-N",
       "shortName": "Kirasa-N",
       "iconLink": "https://assets.tarkov.dev/5b44d22286f774172b0c9de8-icon.webp",
@@ -2146,7 +2222,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": -1,
-      "price": 54818,
+      "price": 54217,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 54217
+      },
       "properties": {
         "class": 3,
         "durability": 240,
@@ -2332,6 +2413,7 @@
     },
     {
       "id": "/armor/6b5-16-zh-86-uley-armored-rig-khaki",
+      "tarkovId": "5c0e3eb886f7742015526062",
       "name": "6B5-16",
       "shortName": "6B5-16",
       "iconLink": "https://assets.tarkov.dev/5c0e3eb886f7742015526062-icon.webp",
@@ -2344,7 +2426,13 @@
       "speed": -4,
       "turn": -1,
       "ergo": -6,
-      "price": 37122,
+      "price": 37145,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL2",
+        "price": 53100,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 3,
         "durability": 160,
@@ -2447,6 +2535,7 @@
     },
     {
       "id": "/armor/6b5-15-zh-86-uley-armored-rig-flora",
+      "tarkovId": "5c0e446786f7742013381639",
       "name": "6B5-15",
       "shortName": "6B5-15",
       "iconLink": "https://assets.tarkov.dev/5c0e446786f7742013381639-icon.webp",
@@ -2459,7 +2548,13 @@
       "speed": -2,
       "turn": -1,
       "ergo": -1,
-      "price": 62052,
+      "price": 61981,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Ragman LL2",
+        "price": 71084,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 4,
         "durability": 110,
@@ -2562,6 +2657,7 @@
     },
     {
       "id": "/armor/6b13-assault-armor-flora",
+      "tarkovId": "5c0e51be86f774598e797894",
       "name": "6B13 FL",
       "shortName": "6B13 FL",
       "iconLink": "https://assets.tarkov.dev/5c0e51be86f774598e797894-icon.webp",
@@ -2574,7 +2670,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": -1,
-      "price": 30779,
+      "price": 31538,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 31538
+      },
       "properties": {
         "class": 4,
         "durability": 203,
@@ -2746,6 +2847,7 @@
     },
     {
       "id": "/armor/6b13-assault-armor-emr",
+      "tarkovId": "5c0e53c886f7747fa54205c7",
       "name": "6B13 EMR",
       "shortName": "6B13 EMR",
       "iconLink": "https://assets.tarkov.dev/5c0e53c886f7747fa54205c7-icon.webp",
@@ -2758,7 +2860,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": -1,
-      "price": 28487,
+      "price": 28970,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 28970
+      },
       "properties": {
         "class": 4,
         "durability": 203,
@@ -2930,6 +3037,7 @@
     },
     {
       "id": "/armor/6b13-m-assault-armor-killa-edition",
+      "tarkovId": "5c0e541586f7747fa54205c9",
       "name": "6B13 KE",
       "shortName": "6B13 KE",
       "iconLink": "https://assets.tarkov.dev/5c0e541586f7747fa54205c9-icon.webp",
@@ -2942,7 +3050,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": 0,
-      "price": 71309,
+      "price": 70240,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 70240
+      },
       "properties": {
         "class": 5,
         "durability": 249,
@@ -3114,6 +3227,7 @@
     },
     {
       "id": "/armor/6b23-2-body-armor-mountain-flora",
+      "tarkovId": "5c0e57ba86f7747fa141986d",
       "name": "6B23-2 MF",
       "shortName": "6B23-2 MF",
       "iconLink": "https://assets.tarkov.dev/5c0e57ba86f7747fa141986d-icon.webp",
@@ -3126,7 +3240,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": -2.5,
-      "price": 68076,
+      "price": 67127,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 67127
+      },
       "properties": {
         "class": 4,
         "durability": 246,
@@ -3322,6 +3441,7 @@
     },
     {
       "id": "/armor/6b23-1-body-armor-emr",
+      "tarkovId": "5c0e5bab86f77461f55ed1f3",
       "name": "6B23-1 EMR",
       "shortName": "6B23-1 EMR",
       "iconLink": "https://assets.tarkov.dev/5c0e5bab86f77461f55ed1f3-icon.webp",
@@ -3334,7 +3454,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": -2.5,
-      "price": 53310,
+      "price": 53113,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 53113
+      },
       "properties": {
         "class": 3,
         "durability": 206,
@@ -3526,6 +3651,7 @@
     },
     {
       "id": "/armor/bnti-zhuk-body-armor-press",
+      "tarkovId": "5c0e5edb86f77461f55ed1f7",
       "name": "Zhuk",
       "shortName": "Zhuk",
       "iconLink": "https://assets.tarkov.dev/5c0e5edb86f77461f55ed1f7-icon.webp",
@@ -3538,7 +3664,12 @@
       "speed": -1.5,
       "turn": 0,
       "ergo": 0,
-      "price": 39317,
+      "price": 39050,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 39050
+      },
       "properties": {
         "class": 3,
         "durability": 185,
@@ -3737,6 +3868,7 @@
     },
     {
       "id": "/armor/bnti-zhuk-body-armor-emr",
+      "tarkovId": "5c0e625a86f7742d77340f62",
       "name": "Zhuk EMR",
       "shortName": "Zhuk EMR",
       "iconLink": "https://assets.tarkov.dev/5c0e625a86f7742d77340f62-icon.webp",
@@ -3749,7 +3881,14 @@
       "speed": -1.5,
       "turn": 0,
       "ergo": 0,
-      "price": 169806,
+      "price": 161569,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 94125,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 6,
         "durability": 305,
@@ -3944,6 +4083,7 @@
     },
     {
       "id": "/armor/highcom-trooper-tfo-body-armor-multicam",
+      "tarkovId": "5c0e655586f774045612eeb2",
       "name": "Trooper",
       "shortName": "Trooper",
       "iconLink": "https://assets.tarkov.dev/5c0e655586f774045612eeb2-icon.webp",
@@ -3956,7 +4096,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": 0,
-      "price": 151408,
+      "price": 152934,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 152934
+      },
       "properties": {
         "class": 4,
         "durability": 180,
@@ -4073,6 +4218,7 @@
     },
     {
       "id": "/armor/ana-tactical-m1-plate-carrier-od-green",
+      "tarkovId": "5c0e722886f7740458316a57",
       "name": "ANA M1",
       "shortName": "ANA M1",
       "iconLink": "https://assets.tarkov.dev/5c0e722886f7740458316a57-icon.webp",
@@ -4085,7 +4231,12 @@
       "speed": -2,
       "turn": 0,
       "ergo": 0,
-      "price": 87384,
+      "price": 91619,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 91619
+      },
       "properties": {
         "class": 4,
         "durability": 194,
@@ -4274,6 +4425,7 @@
     },
     {
       "id": "/armor/wartech-tv-110-plate-carrier-coyote",
+      "tarkovId": "5c0e746986f7741453628fe5",
       "name": "TV-110",
       "shortName": "TV-110",
       "iconLink": "https://assets.tarkov.dev/5c0e746986f7741453628fe5-icon.webp",
@@ -4286,7 +4438,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": 0,
-      "price": 121714,
+      "price": 122278,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 122278
+      },
       "properties": {
         "class": 4,
         "durability": 160,
@@ -4403,6 +4560,7 @@
     },
     {
       "id": "/armor/fort-redut-m-body-armor",
+      "tarkovId": "5ca2151486f774244a3b8d30",
       "name": "Redut-M",
       "shortName": "Redut-M",
       "iconLink": "https://assets.tarkov.dev/5ca2151486f774244a3b8d30-icon.webp",
@@ -4415,7 +4573,14 @@
       "speed": -3,
       "turn": -3,
       "ergo": -3,
-      "price": 50161,
+      "price": 50074,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL4",
+        "price": 81189,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 358,
@@ -4669,6 +4834,7 @@
     },
     {
       "id": "/armor/fort-redut-t5-body-armor-smog",
+      "tarkovId": "5ca21c6986f77479963115a7",
       "name": "Redut-T5",
       "shortName": "Redut-T5",
       "iconLink": "https://assets.tarkov.dev/5ca21c6986f77479963115a7-icon.webp",
@@ -4682,6 +4848,13 @@
       "turn": -3,
       "ergo": -5,
       "price": 106865,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL4",
+        "price": 89156,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 6,
         "durability": 504,
@@ -4977,6 +5150,7 @@
     },
     {
       "id": "/armor/6b3tm-01-armored-rig-khaki",
+      "tarkovId": "5d5d646386f7742797261fd9",
       "name": "6B3TM-01",
       "shortName": "6B3TM-01",
       "iconLink": "https://assets.tarkov.dev/5d5d646386f7742797261fd9-icon.webp",
@@ -4989,7 +5163,14 @@
       "speed": -5,
       "turn": -1,
       "ergo": -7,
-      "price": 99032,
+      "price": 99448,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL2",
+        "price": 50144,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 86,
@@ -5090,6 +5271,7 @@
     },
     {
       "id": "/armor/ars-arma-a18-skanda-plate-carrier-multicam",
+      "tarkovId": "5d5d87f786f77427997cfaef",
       "name": "A18 Skanda",
       "shortName": "A18 Skanda",
       "iconLink": "https://assets.tarkov.dev/5d5d87f786f77427997cfaef-icon.webp",
@@ -5102,7 +5284,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": -3,
-      "price": 88688,
+      "price": 84984,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 84984
+      },
       "properties": {
         "class": 4,
         "durability": 186,
@@ -5287,6 +5474,7 @@
     },
     {
       "id": "/armor/6b2-body-armor-flora",
+      "tarkovId": "5df8a2ca86f7740bfe6df777",
       "name": "6B2",
       "shortName": "6B2",
       "iconLink": "https://assets.tarkov.dev/5df8a2ca86f7740bfe6df777-icon.webp",
@@ -5299,7 +5487,13 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 25361,
+      "price": 24286,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL1",
+        "price": 24402,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 2,
         "durability": 128,
@@ -5358,6 +5552,7 @@
     },
     {
       "id": "/armor/lbt-6094a-slick-plate-carrier-black",
+      "tarkovId": "5e4abb5086f77406975c9342",
       "name": "Slick",
       "shortName": "Slick",
       "iconLink": "https://assets.tarkov.dev/5e4abb5086f77406975c9342-icon.webp",
@@ -5370,7 +5565,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": 0,
-      "price": 104526,
+      "price": 97891,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 97891
+      },
       "properties": {
         "class": 6,
         "durability": 200,
@@ -5483,6 +5683,7 @@
     },
     {
       "id": "/armor/ars-arma-cpc-mod1-plate-carrier-a-tacs-fg",
+      "tarkovId": "5e4ac41886f77406a511c9a8",
       "name": "CPC MOD.1",
       "shortName": "CPC MOD.1",
       "iconLink": "https://assets.tarkov.dev/5e4ac41886f77406a511c9a8-icon.webp",
@@ -5495,7 +5696,14 @@
       "speed": 0,
       "turn": 0,
       "ergo": -1,
-      "price": 233610,
+      "price": 226547,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 523425.00000000006,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 240,
@@ -5680,6 +5888,7 @@
     },
     {
       "id": "/armor/fort-defender-2-body-armor",
+      "tarkovId": "5e9dacf986f774054d6b89f4",
       "name": "Defender-2",
       "shortName": "Defender-2",
       "iconLink": "https://assets.tarkov.dev/5e9dacf986f774054d6b89f4-icon.webp",
@@ -5692,7 +5901,12 @@
       "speed": -1,
       "turn": -4,
       "ergo": -1,
-      "price": 55392,
+      "price": 56136,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 56136
+      },
       "properties": {
         "class": 5,
         "durability": 320,
@@ -5897,6 +6111,7 @@
     },
     {
       "id": "/armor/npp-klass-korund-vm-body-armor-black",
+      "tarkovId": "5f5f41476bdad616ad46d631",
       "name": "Korund-VM",
       "shortName": "Korund-VM",
       "iconLink": "https://assets.tarkov.dev/5f5f41476bdad616ad46d631-icon.webp",
@@ -5909,7 +6124,12 @@
       "speed": -5,
       "turn": -2.5,
       "ergo": -3,
-      "price": 150120,
+      "price": 152290,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 152290
+      },
       "properties": {
         "class": 5,
         "durability": 310,
@@ -6123,6 +6343,7 @@
     },
     {
       "id": "/armor/511-tactical-hexgrid-plate-carrier",
+      "tarkovId": "5fd4c474dd870108a754b241",
       "name": "Hexgrid",
       "shortName": "Hexgrid",
       "iconLink": "https://assets.tarkov.dev/5fd4c474dd870108a754b241-icon.webp",
@@ -6135,7 +6356,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 71318,
+      "price": 82056,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 82056
+      },
       "properties": {
         "class": 6,
         "durability": 100,
@@ -6206,6 +6432,7 @@
     },
     {
       "id": "/armor/lbt-6094a-slick-plate-carrier-coyote-tan",
+      "tarkovId": "6038b4b292ec1c3103795a0b",
       "name": "Slick",
       "shortName": "Slick",
       "iconLink": "https://assets.tarkov.dev/6038b4b292ec1c3103795a0b-icon.webp",
@@ -6218,7 +6445,12 @@
       "speed": -5,
       "turn": -1,
       "ergo": 0,
-      "price": 82124,
+      "price": 115377,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 115377
+      },
       "properties": {
         "class": 6,
         "durability": 200,
@@ -6331,6 +6563,7 @@
     },
     {
       "id": "/armor/lbt-6094a-slick-plate-carrier-olive-drab",
+      "tarkovId": "6038b4ca92ec1c3103795a0d",
       "name": "Slick",
       "shortName": "Slick",
       "iconLink": "https://assets.tarkov.dev/6038b4ca92ec1c3103795a0d-icon.webp",
@@ -6343,7 +6576,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": 0,
-      "price": 91910,
+      "price": 93999,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 93999
+      },
       "properties": {
         "class": 6,
         "durability": 200,
@@ -6456,6 +6694,7 @@
     },
     {
       "id": "/armor/paca-soft-armor-rivals-edition",
+      "tarkovId": "607f20859ee58b18e41ecd90",
       "name": "PACA TR",
       "shortName": "PACA TR",
       "iconLink": "https://assets.tarkov.dev/607f20859ee58b18e41ecd90-icon.webp",
@@ -6469,6 +6708,11 @@
       "turn": 0,
       "ergo": -1,
       "price": 52839,
+      "acquisition": {
+        "kind": "fir",
+        "source": "FIR / flea",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 100,
@@ -6569,6 +6813,7 @@
     },
     {
       "id": "/armor/nfm-thor-concealable-reinforced-vest-body-armor",
+      "tarkovId": "609e8540d5c319764c2bc2e9",
       "name": "THOR CRV",
       "shortName": "THOR CRV",
       "iconLink": "https://assets.tarkov.dev/609e8540d5c319764c2bc2e9-icon.webp",
@@ -6581,7 +6826,12 @@
       "speed": 0,
       "turn": -1,
       "ergo": 0,
-      "price": 118676,
+      "price": 120779,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 120779
+      },
       "properties": {
         "class": 4,
         "durability": 170,
@@ -6770,6 +7020,7 @@
     },
     {
       "id": "/armor/crye-precision-avs-plate-carrier-tagilla-edition",
+      "tarkovId": "609e860ebd219504d8507525",
       "name": "AVS TE",
       "shortName": "AVS TE",
       "iconLink": "https://assets.tarkov.dev/609e860ebd219504d8507525-icon.webp",
@@ -6782,7 +7033,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": -2,
-      "price": 37326,
+      "price": 37665,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 37665
+      },
       "properties": {
         "class": 6,
         "durability": 170,
@@ -6895,6 +7151,7 @@
     },
     {
       "id": "/armor/nfm-thor-integrated-carrier-body-armor",
+      "tarkovId": "60a283193cb70855c43a381d",
       "name": "THOR IC",
       "shortName": "THOR IC",
       "iconLink": "https://assets.tarkov.dev/60a283193cb70855c43a381d-icon.webp",
@@ -6908,6 +7165,13 @@
       "turn": -5,
       "ergo": -6,
       "price": 129502,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Peacekeeper LL4",
+        "price": 59762,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 6,
         "durability": 466,
@@ -7182,6 +7446,7 @@
     },
     {
       "id": "/armor/cqc-osprey-mk4a-plate-carrier-protection-mtp",
+      "tarkovId": "60a3c68c37ea821725773ef5",
       "name": "Osprey MK4A (P)",
       "shortName": "Osprey MK4A (P)",
       "iconLink": "https://assets.tarkov.dev/60a3c68c37ea821725773ef5-icon.webp",
@@ -7194,7 +7459,12 @@
       "speed": -3,
       "turn": -1,
       "ergo": -2,
-      "price": 95410,
+      "price": 93915,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 93915
+      },
       "properties": {
         "class": 5,
         "durability": 272,
@@ -7448,6 +7718,7 @@
     },
     {
       "id": "/armor/cqc-osprey-mk4a-plate-carrier-assault-mtp",
+      "tarkovId": "60a3c70cde5f453f634816a3",
       "name": "Osprey MK4A (A)",
       "shortName": "Osprey MK4A (A)",
       "iconLink": "https://assets.tarkov.dev/60a3c70cde5f453f634816a3-icon.webp",
@@ -7460,7 +7731,12 @@
       "speed": -3,
       "turn": -1,
       "ergo": -2,
-      "price": 103318,
+      "price": 101637,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 101637
+      },
       "properties": {
         "class": 4,
         "durability": 222,
@@ -7714,6 +7990,7 @@
     },
     {
       "id": "/armor/eagle-industries-mmac-plate-carrier-ranger-green",
+      "tarkovId": "61bc85697113f767765c7fe7",
       "name": "MMAC",
       "shortName": "MMAC",
       "iconLink": "https://assets.tarkov.dev/61bc85697113f767765c7fe7-icon.webp",
@@ -7726,7 +8003,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 55751,
+      "price": 58922,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 58922
+      },
       "properties": {
         "class": 4,
         "durability": 144,
@@ -7907,6 +8189,7 @@
     },
     {
       "id": "/armor/first-spear-strandhogg-plate-carrier-ranger-green",
+      "tarkovId": "61bcc89aef0f505f0c6cd0fc",
       "name": "Strandhogg",
       "shortName": "Strandhogg",
       "iconLink": "https://assets.tarkov.dev/61bcc89aef0f505f0c6cd0fc-icon.webp",
@@ -7919,7 +8202,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": 0,
-      "price": 57509,
+      "price": 57925,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 57925
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -8121,6 +8409,7 @@
     },
     {
       "id": "/armor/ss-precision-plateframe-plate-carrier-goons-edition",
+      "tarkovId": "628b9784bcf6e2659e09b8a2",
       "name": "PlateFrame GE",
       "shortName": "PlateFrame GE",
       "iconLink": "https://assets.tarkov.dev/628b9784bcf6e2659e09b8a2-icon.webp",
@@ -8133,7 +8422,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": -1,
-      "price": 38325,
+      "price": 38265,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 38265
+      },
       "properties": {
         "class": 5,
         "durability": 120,
@@ -8228,6 +8522,7 @@
     },
     {
       "id": "/armor/crye-precision-cpc-plate-carrier-goons-edition",
+      "tarkovId": "628b9c7d45122232a872358f",
       "name": "CPC GE",
       "shortName": "CPC GE",
       "iconLink": "https://assets.tarkov.dev/628b9c7d45122232a872358f-icon.webp",
@@ -8240,7 +8535,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": 0,
-      "price": 67159,
+      "price": 67327,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 67327
+      },
       "properties": {
         "class": 5,
         "durability": 230,
@@ -8419,6 +8719,7 @@
     },
     {
       "id": "/armor/tasmanian-tiger-sk-plate-carrier-multicam-black",
+      "tarkovId": "628cd624459354321c4b7fa2",
       "name": "TT SK",
       "shortName": "TT SK",
       "iconLink": "https://assets.tarkov.dev/628cd624459354321c4b7fa2-icon.webp",
@@ -8431,7 +8732,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": 0,
-      "price": 48904,
+      "price": 50975,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 50975
+      },
       "properties": {
         "class": 6,
         "durability": 110,
@@ -8502,6 +8808,7 @@
     },
     {
       "id": "/armor/npp-klass-bagariy-plate-carrier-emr",
+      "tarkovId": "628d0618d1ba6e4fa07ce5a4",
       "name": "Bagariy",
       "shortName": "Bagariy",
       "iconLink": "https://assets.tarkov.dev/628d0618d1ba6e4fa07ce5a4-icon.webp",
@@ -8514,7 +8821,12 @@
       "speed": -4,
       "turn": -1.5,
       "ergo": -2,
-      "price": 180932,
+      "price": 187313,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 187313
+      },
       "properties": {
         "class": 5,
         "durability": 232,
@@ -8663,6 +8975,7 @@
     },
     {
       "id": "/armor/eclipse-rbav-af-plate-carrier-ranger-green",
+      "tarkovId": "628dc750b910320f4c27a732",
       "name": "RBAV-AF",
       "shortName": "RBAV-AF",
       "iconLink": "https://assets.tarkov.dev/628dc750b910320f4c27a732-icon.webp",
@@ -8675,7 +8988,12 @@
       "speed": -2,
       "turn": 0,
       "ergo": -1,
-      "price": 54922,
+      "price": 57073,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 57073
+      },
       "properties": {
         "class": 4,
         "durability": 218,
@@ -8877,6 +9195,7 @@
     },
     {
       "id": "/armor/drd-body-armor",
+      "tarkovId": "62a09d79de7ac81993580530",
       "name": "DRD",
       "shortName": "DRD",
       "iconLink": "https://assets.tarkov.dev/62a09d79de7ac81993580530-icon.webp",
@@ -8889,7 +9208,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 33430,
+      "price": 33909,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 33909
+      },
       "properties": {
         "class": 3,
         "durability": 120,
@@ -8990,6 +9314,7 @@
     },
     {
       "id": "/armor/hexatac-hpc-plate-carrier-multicam-black",
+      "tarkovId": "63737f448b28897f2802b874",
       "name": "HPC",
       "shortName": "HPC",
       "iconLink": "https://assets.tarkov.dev/63737f448b28897f2802b874-icon.webp",
@@ -9002,7 +9327,12 @@
       "speed": 0,
       "turn": -1,
       "ergo": 0,
-      "price": 38533,
+      "price": 37872,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 37872
+      },
       "properties": {
         "class": 5,
         "durability": 90,
@@ -9073,6 +9403,7 @@
     },
     {
       "id": "/armor/shellback-tactical-banshee-plate-carrier-a-tacs-au",
+      "tarkovId": "639343fce101f4caa40a4ef3",
       "name": "Banshee",
       "shortName": "Banshee",
       "iconLink": "https://assets.tarkov.dev/639343fce101f4caa40a4ef3-icon.webp",
@@ -9085,7 +9416,12 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 50982,
+      "price": 50156,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 50156
+      },
       "properties": {
         "class": 4,
         "durability": 152,
@@ -9264,6 +9600,7 @@
     },
     {
       "id": "/armor/wartech-tv-115-plate-carrier-olive-drab",
+      "tarkovId": "64a536392d2c4e6e970f4121",
       "name": "TV-115",
       "shortName": "TV-115",
       "iconLink": "https://assets.tarkov.dev/64a536392d2c4e6e970f4121-icon.webp",
@@ -9276,7 +9613,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": 0,
-      "price": 48923,
+      "price": 48720,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 48720
+      },
       "properties": {
         "class": 3,
         "durability": 122,
@@ -9393,6 +9735,7 @@
     },
     {
       "id": "/armor/eagle-allied-industries-mbss-plate-carrier-coyote-brown",
+      "tarkovId": "64a5366719bab53bd203bf33",
       "name": "MBSS",
       "shortName": "MBSS",
       "iconLink": "https://assets.tarkov.dev/64a5366719bab53bd203bf33-icon.webp",
@@ -9405,7 +9748,12 @@
       "speed": 0,
       "turn": -1,
       "ergo": -1,
-      "price": 42187,
+      "price": 42374,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 42374
+      },
       "properties": {
         "class": 3,
         "durability": 70,
@@ -9476,6 +9824,7 @@
     },
     {
       "id": "/armor/interceptor-otv-body-armor-ucp",
+      "tarkovId": "64abd93857958b4249003418",
       "name": "OTV",
       "shortName": "OTV",
       "iconLink": "https://assets.tarkov.dev/64abd93857958b4249003418-icon.webp",
@@ -9488,7 +9837,12 @@
       "speed": -2,
       "turn": -1,
       "ergo": 0,
-      "price": 88327,
+      "price": 92235,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 92235
+      },
       "properties": {
         "class": 4,
         "durability": 222,
@@ -9651,6 +10005,7 @@
     },
     {
       "id": "/armor/npp-klass-kora-kulon-body-armor-black",
+      "tarkovId": "64be79c487d1510151095552",
       "name": "Kora-Kulon",
       "shortName": "Kora-Kulon",
       "iconLink": "https://assets.tarkov.dev/64be79c487d1510151095552-icon.webp",
@@ -9663,7 +10018,14 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 44542,
+      "price": 45113,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL1",
+        "price": 28278,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 3,
         "durability": 128,
@@ -9722,6 +10084,7 @@
     },
     {
       "id": "/armor/npp-klass-kora-kulon-body-armor-emr",
+      "tarkovId": "64be79e2bf8412471d0d9bcc",
       "name": "Kora-Kulon EMR",
       "shortName": "Kora-Kulon EMR",
       "iconLink": "https://assets.tarkov.dev/64be79e2bf8412471d0d9bcc-icon.webp",
@@ -9734,7 +10097,13 @@
       "speed": -1,
       "turn": -1,
       "ergo": -1,
-      "price": 35138,
+      "price": 34886,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL1",
+        "price": 45210,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 3,
         "durability": 128,
@@ -9793,6 +10162,7 @@
     },
     {
       "id": "/armor/stich-profi-stich-defense-mod2-plate-carrier-multicam",
+      "tarkovId": "66b6295178bbc0200425f995",
       "name": "SD mod.2",
       "shortName": "SD mod.2",
       "iconLink": "https://assets.tarkov.dev/66b6295178bbc0200425f995-icon.webp",
@@ -9805,7 +10175,12 @@
       "speed": -3,
       "turn": -2,
       "ergo": -1,
-      "price": 73185,
+      "price": 76327,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 76327
+      },
       "properties": {
         "class": 6,
         "durability": 220,
@@ -9990,6 +10365,7 @@
     },
     {
       "id": "/armor/tasmanian-tiger-plate-carrier-mkiii-coyote-brown",
+      "tarkovId": "66b6295a8ca68c6461709efa",
       "name": "TT MKIII",
       "shortName": "TT MKIII",
       "iconLink": "https://assets.tarkov.dev/66b6295a8ca68c6461709efa-icon.webp",
@@ -10002,7 +10378,12 @@
       "speed": -1,
       "turn": 0,
       "ergo": 0,
-      "price": 34851,
+      "price": 34164,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 34164
+      },
       "properties": {
         "class": 5,
         "durability": 110,
@@ -10073,6 +10454,7 @@
     },
     {
       "id": "/armor/stich-profi-plate-carrier-v2-black",
+      "tarkovId": "66b6296d7994640992013b17",
       "name": "SP PC V2",
       "shortName": "SP PC V2",
       "iconLink": "https://assets.tarkov.dev/66b6296d7994640992013b17-icon.webp",
@@ -10085,7 +10467,12 @@
       "speed": -2,
       "turn": -1,
       "ergo": -1,
-      "price": 125305,
+      "price": 124057,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 124057
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -10291,6 +10678,7 @@
     },
     {
       "id": "/armor/6b13-m-assault-armor-christmas-edition",
+      "tarkovId": "674d91ce6e862d5a95059ed6",
       "name": "6B13 CE",
       "shortName": "6B13 CE",
       "iconLink": "https://assets.tarkov.dev/674d91ce6e862d5a95059ed6-icon.webp",
@@ -10304,6 +10692,11 @@
       "turn": 0,
       "ergo": 0,
       "price": 1277777,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 1277777
+      },
       "properties": {
         "class": 5,
         "durability": 249,
@@ -10475,6 +10868,7 @@
     },
     {
       "id": "/armor/hexatac-hpc-plate-carrier-multicam",
+      "tarkovId": "67ab2eecfe82855dcc0f2af6",
       "name": "HPC",
       "shortName": "HPC",
       "iconLink": "https://assets.tarkov.dev/67ab2eecfe82855dcc0f2af6-icon.webp",
@@ -10488,6 +10882,13 @@
       "turn": -1,
       "ergo": 0,
       "price": 31398,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 185250,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 90,
@@ -10558,6 +10959,7 @@
     },
     {
       "id": "/armor/bnti-kirasa-n-body-armor-green",
+      "tarkovId": "67ab2f28dafe3b22670c9116",
       "name": "Kirasa-N",
       "shortName": "Kirasa-N",
       "iconLink": "https://assets.tarkov.dev/67ab2f28dafe3b22670c9116-icon.webp",
@@ -10571,6 +10973,13 @@
       "turn": 0,
       "ergo": -1,
       "price": 24972,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL1",
+        "price": 102675,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 3,
         "durability": 240,
@@ -10756,6 +11165,7 @@
     },
     {
       "id": "/armor/fort-redut-m-body-armor-sk-woodland",
+      "tarkovId": "67ab2f5adafe3b22670c911f",
       "name": "Redut-M",
       "shortName": "Redut-M",
       "iconLink": "https://assets.tarkov.dev/67ab2f5adafe3b22670c911f-icon.webp",
@@ -10769,6 +11179,13 @@
       "turn": -3,
       "ergo": -3,
       "price": 74907,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 386700,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 358,
@@ -11022,6 +11439,7 @@
     },
     {
       "id": "/armor/highcom-trooper-tfo-body-armor-coyote",
+      "tarkovId": "67ab2f94dafe3b22670c912c",
       "name": "Trooper",
       "shortName": "Trooper",
       "iconLink": "https://assets.tarkov.dev/67ab2f94dafe3b22670c912c-icon.webp",
@@ -11035,6 +11453,13 @@
       "turn": -1,
       "ergo": 0,
       "price": 55760,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 179850,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 180,
@@ -11151,6 +11576,7 @@
     },
     {
       "id": "/armor/crye-precision-avs-plate-carrier-multicam",
+      "tarkovId": "67ab49aab9c7a1e18c095686",
       "name": "AVS",
       "shortName": "AVS",
       "iconLink": "https://assets.tarkov.dev/67ab49aab9c7a1e18c095686-icon.webp",
@@ -11164,6 +11590,13 @@
       "turn": 0,
       "ergo": 0,
       "price": 58629,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 205950,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 212,
@@ -11299,6 +11732,7 @@
     },
     {
       "id": "/armor/511-tactical-tactec-plate-carrier-storm",
+      "tarkovId": "67ab4b2d6f7ae4aa550bbcf6",
       "name": "TacTec",
       "shortName": "TacTec",
       "iconLink": "https://assets.tarkov.dev/67ab4b2d6f7ae4aa550bbcf6-icon.webp",
@@ -11312,6 +11746,13 @@
       "turn": 0,
       "ergo": 0,
       "price": 52398,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 465000,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 170,
@@ -11424,6 +11865,7 @@
     },
     {
       "id": "/armor/spiritus-systems-lv-119-plate-carrier-black-division-v1",
+      "tarkovId": "689479a4a733b1602007e2eb",
       "name": "LV-119",
       "shortName": "LV-119",
       "iconLink": "https://assets.tarkov.dev/689479a4a733b1602007e2eb-icon.webp",
@@ -11437,6 +11879,13 @@
       "turn": -1,
       "ergo": 0,
       "price": 86352,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Peacekeeper LL4",
+        "price": 3150,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 6,
         "durability": 220,
@@ -11591,6 +12040,7 @@
     },
     {
       "id": "/armor/ferro-concepts-fcpc-v5-plate-carrier-black-division",
+      "tarkovId": "689479cb47e5acd1e10be986",
       "name": "FCPC V5",
       "shortName": "FCPC V5",
       "iconLink": "https://assets.tarkov.dev/689479cb47e5acd1e10be986-icon.webp",
@@ -11604,6 +12054,13 @@
       "turn": -2,
       "ergo": -1,
       "price": 68398,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ragman LL3",
+        "price": 1050,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 198,
@@ -11758,6 +12215,7 @@
     },
     {
       "id": "/armor/spiritus-systems-lv-119-plate-carrier-black-division-v2",
+      "tarkovId": "689479eb30cc5ba7be00f5ff",
       "name": "LV-119",
       "shortName": "LV-119",
       "iconLink": "https://assets.tarkov.dev/689479eb30cc5ba7be00f5ff-icon.webp",
@@ -11771,6 +12229,13 @@
       "turn": -2,
       "ergo": -1,
       "price": 72385,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Peacekeeper LL3",
+        "price": 2100,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 198,
@@ -11883,6 +12348,7 @@
     },
     {
       "id": "/armor/first-spear-siege-r-optimized-mass-plate-carrier-black-division",
+      "tarkovId": "68947a4be4bf255d1b0ca746",
       "name": "Siege-R",
       "shortName": "Siege-R",
       "iconLink": "https://assets.tarkov.dev/68947a4be4bf255d1b0ca746-icon.webp",
@@ -11896,6 +12362,13 @@
       "turn": -3,
       "ergo": -5,
       "price": 147225,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Peacekeeper LL4",
+        "price": 2100,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 350,
@@ -12164,6 +12637,7 @@
     },
     {
       "id": "/armor/6b45-body-armor-emr",
+      "tarkovId": "68948a95d8f2b85fb705e2a6",
       "name": "6B45",
       "shortName": "6B45",
       "iconLink": "https://assets.tarkov.dev/68948a95d8f2b85fb705e2a6-icon.webp",
@@ -12176,7 +12650,13 @@
       "speed": -5,
       "turn": -3,
       "ergo": -3,
-      "price": 111574,
+      "price": 111526,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL3",
+        "price": 104323,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 6,
         "durability": 374,
@@ -12388,6 +12868,7 @@
     },
     {
       "id": "/armor/6b45-armored-rig-general-purpose-emr",
+      "tarkovId": "68948ad72c87773b9f06d73f",
       "name": "6B45",
       "shortName": "6B45",
       "iconLink": "https://assets.tarkov.dev/68948ad72c87773b9f06d73f-icon.webp",
@@ -12400,7 +12881,13 @@
       "speed": -5,
       "turn": -3,
       "ergo": -3,
-      "price": 127001,
+      "price": 123650,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL3",
+        "price": 110919,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 5,
         "durability": 364,
@@ -12612,6 +13099,7 @@
     },
     {
       "id": "/armor/6b45-armored-rig-medic-emr",
+      "tarkovId": "68948aebd8f2b85fb705e2b0",
       "name": "6B45",
       "shortName": "6B45",
       "iconLink": "https://assets.tarkov.dev/68948aebd8f2b85fb705e2b0-icon.webp",
@@ -12624,7 +13112,13 @@
       "speed": -5,
       "turn": -3,
       "ergo": -3,
-      "price": 153192,
+      "price": 150485,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL3",
+        "price": 109559,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 5,
         "durability": 364,
@@ -12836,6 +13330,7 @@
     },
     {
       "id": "/armor/6b45-armored-rig-assault-emr",
+      "tarkovId": "68948b118c57a8a52301d7ae",
       "name": "6B45",
       "shortName": "6B45",
       "iconLink": "https://assets.tarkov.dev/68948b118c57a8a52301d7ae-icon.webp",
@@ -12848,7 +13343,13 @@
       "speed": -5,
       "turn": -3,
       "ergo": -3,
-      "price": 114443,
+      "price": 114271,
+      "acquisition": {
+        "kind": "trader",
+        "source": "Prapor LL4",
+        "price": 114999,
+        "taskUnlock": null
+      },
       "properties": {
         "class": 6,
         "durability": 414,
@@ -13060,6 +13561,7 @@
     },
     {
       "id": "/armor/first-spear-strandhogg-plate-carrier-abupat",
+      "tarkovId": "68a85ab8ef22d08bf401fa68",
       "name": "Strandhogg",
       "shortName": "Strandhogg",
       "iconLink": "https://assets.tarkov.dev/68a85ab8ef22d08bf401fa68-icon.webp",
@@ -13073,6 +13575,13 @@
       "turn": 0,
       "ergo": 0,
       "price": 36118,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 228000,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -13274,6 +13783,7 @@
     },
     {
       "id": "/armor/nfm-thor-concealable-reinforced-vest-body-armor-head-eyes",
+      "tarkovId": "68a89146212dbbeead0d5636",
       "name": "THOR CRV",
       "shortName": "THOR CRV",
       "iconLink": "https://assets.tarkov.dev/68a89146212dbbeead0d5636-icon.webp",
@@ -13287,6 +13797,13 @@
       "turn": -1,
       "ergo": 0,
       "price": 38097,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL2",
+        "price": 257175,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 170,
@@ -13475,6 +13992,7 @@
     },
     {
       "id": "/armor/interceptor-otv-body-armor-woodland",
+      "tarkovId": "68a89942431252e29a02dbf6",
       "name": "OTV",
       "shortName": "OTV",
       "iconLink": "https://assets.tarkov.dev/68a89942431252e29a02dbf6-icon.webp",
@@ -13488,6 +14006,13 @@
       "turn": -1,
       "ergo": 0,
       "price": 40491,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL2",
+        "price": 216150,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 222,
@@ -13650,6 +14175,7 @@
     },
     {
       "id": "/armor/npp-klass-korund-vm-body-armor-kamysh",
+      "tarkovId": "68a97093431252e29a02dc06",
       "name": "Korund-VM",
       "shortName": "Korund-VM",
       "iconLink": "https://assets.tarkov.dev/68a97093431252e29a02dc06-icon.webp",
@@ -13663,6 +14189,13 @@
       "turn": -2.5,
       "ergo": -3,
       "price": 48428,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 245775.00000000003,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 310,
@@ -13876,6 +14409,7 @@
     },
     {
       "id": "/armor/stich-profi-plate-carrier-v2-marpat-woodland",
+      "tarkovId": "68a99207aa809946e507c2f6",
       "name": "SP PC V2",
       "shortName": "SP PC V2",
       "iconLink": "https://assets.tarkov.dev/68a99207aa809946e507c2f6-icon.webp",
@@ -13889,6 +14423,13 @@
       "turn": -1,
       "ergo": -1,
       "price": 34041,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 181725,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -14094,6 +14635,7 @@
     },
     {
       "id": "/armor/crye-precision-jpc-plate-carrier-multicam",
+      "tarkovId": "693fd0e9deee848f70054999",
       "name": "JPC",
       "shortName": "JPC",
       "iconLink": "https://assets.tarkov.dev/693fd0e9deee848f70054999-icon.webp",
@@ -14106,7 +14648,12 @@
       "speed": -0.5,
       "turn": 0,
       "ergo": -0.5,
-      "price": 112169,
+      "price": 110914,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 110914
+      },
       "properties": {
         "class": 5,
         "durability": 110,
@@ -14177,6 +14724,7 @@
     },
     {
       "id": "/armor/tac-kek-jaypc-plate-carrier-black",
+      "tarkovId": "693fd1200ec97e98040bd3f9",
       "name": "JayPC",
       "shortName": "JayPC",
       "iconLink": "https://assets.tarkov.dev/693fd1200ec97e98040bd3f9-icon.webp",
@@ -14189,7 +14737,12 @@
       "speed": 0,
       "turn": 0,
       "ergo": -0.5,
-      "price": 64446,
+      "price": 63939,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 63939
+      },
       "properties": {
         "class": 1,
         "durability": 180,
@@ -14260,6 +14813,7 @@
     },
     {
       "id": "/armor/tac-kek-jaypc-plate-carrier-od-green",
+      "tarkovId": "693fd13aa490096a05028cc8",
       "name": "JayPC",
       "shortName": "JayPC",
       "iconLink": "https://assets.tarkov.dev/693fd13aa490096a05028cc8-icon.webp",
@@ -14272,7 +14826,12 @@
       "speed": -0.5,
       "turn": 0,
       "ergo": -0.5,
-      "price": 55650,
+      "price": 55934,
+      "acquisition": {
+        "kind": "flea",
+        "source": "Flea market",
+        "price": 55934
+      },
       "properties": {
         "class": 1,
         "durability": 180,
@@ -14343,6 +14902,7 @@
     },
     {
       "id": "/armor/ana-tactical-m2-plate-carrier-multicam-alpine",
+      "tarkovId": "69412e5573dcf473e50be464",
       "name": "ANA M2",
       "shortName": "ANA M2",
       "iconLink": "https://assets.tarkov.dev/69412e5573dcf473e50be464-icon.webp",
@@ -14356,6 +14916,13 @@
       "turn": 0,
       "ergo": 0,
       "price": 51362,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 245250.00000000003,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 206,
@@ -14544,6 +15111,7 @@
     },
     {
       "id": "/armor/wartech-tv-115-plate-carrier-black",
+      "tarkovId": "69b10ebfde4dda4a140bddb8",
       "name": "TV-115",
       "shortName": "TV-115",
       "iconLink": "https://assets.tarkov.dev/69b10ebfde4dda4a140bddb8-icon.webp",
@@ -14557,6 +15125,13 @@
       "turn": -1,
       "ergo": 0,
       "price": 26885,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL2",
+        "price": 52425,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 3,
         "durability": 122,
@@ -14671,6 +15246,7 @@
     },
     {
       "id": "/armor/fort-defender-2-body-armor-flecktarn",
+      "tarkovId": "69b11935f3783ec37c03a105",
       "name": "Defender-2",
       "shortName": "Defender-2",
       "iconLink": "https://assets.tarkov.dev/69b11935f3783ec37c03a105-icon.webp",
@@ -14684,6 +15260,13 @@
       "turn": -4,
       "ergo": -1,
       "price": 80609,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 641850,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 320,
@@ -14888,6 +15471,7 @@
     },
     {
       "id": "/armor/fort-redut-m-body-armor-prisoner-of-the-arena",
+      "tarkovId": "69cf9696b96c8e8d3e002925",
       "name": "Redut-M",
       "shortName": "Redut-M",
       "iconLink": "https://assets.tarkov.dev/69cf9696b96c8e8d3e002925-icon.webp",
@@ -14901,6 +15485,13 @@
       "turn": -4,
       "ergo": -3,
       "price": 76907,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 511425,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 358,
@@ -15154,6 +15745,7 @@
     },
     {
       "id": "/armor/fort-redut-m-body-armor-black",
+      "tarkovId": "69cfef0d6242b966d40803e7",
       "name": "Redut-M",
       "shortName": "Redut-M",
       "iconLink": "https://assets.tarkov.dev/69cfef0d6242b966d40803e7-icon.webp",
@@ -15167,6 +15759,13 @@
       "turn": -4,
       "ergo": -3,
       "price": 76907,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 511425,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 358,
@@ -15420,6 +16019,7 @@
     },
     {
       "id": "/armor/stich-profi-plate-carrier-v2-a-tacs-fg",
+      "tarkovId": "69cfff5920eac4535609a008",
       "name": "SP PC V2",
       "shortName": "SP PC V2",
       "iconLink": "https://assets.tarkov.dev/69cfff5920eac4535609a008-icon.webp",
@@ -15433,6 +16033,13 @@
       "turn": -2,
       "ergo": -2,
       "price": 35041,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 190500,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -15643,6 +16250,7 @@
     },
     {
       "id": "/armor/stich-profi-plate-carrier-v2-coyote",
+      "tarkovId": "69cfff99cb69530af90a8279",
       "name": "SP PC V2",
       "shortName": "SP PC V2",
       "iconLink": "https://assets.tarkov.dev/69cfff99cb69530af90a8279-icon.webp",
@@ -15656,6 +16264,13 @@
       "turn": -2,
       "ergo": -2,
       "price": 35041,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 190950,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -15866,6 +16481,7 @@
     },
     {
       "id": "/armor/fort-gladiator-s-plate-carrier-death-is-inevitable",
+      "tarkovId": "69d26ff4b855150a70092b8c",
       "name": "Gladiator-S",
       "shortName": "Gladiator-S",
       "iconLink": "https://assets.tarkov.dev/69d26ff4b855150a70092b8c-icon.webp",
@@ -15879,6 +16495,13 @@
       "turn": -3.5,
       "ergo": -5,
       "price": 106118,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 809175,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 440,
@@ -16153,6 +16776,7 @@
     },
     {
       "id": "/armor/fort-gladiator-s-plate-carrier-viking",
+      "tarkovId": "69d27591df93e6952a031c84",
       "name": "Gladiator-S",
       "shortName": "Gladiator-S",
       "iconLink": "https://assets.tarkov.dev/69d27591df93e6952a031c84-icon.webp",
@@ -16166,6 +16790,13 @@
       "turn": -0.5,
       "ergo": -0.5,
       "price": 76270,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 693075,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 282,
@@ -16308,6 +16939,7 @@
     },
     {
       "id": "/armor/fort-gladiator-s-plate-carrier-lightweight-multicam",
+      "tarkovId": "69d27ebeb855150a70092ba3",
       "name": "Gladiator-S",
       "shortName": "Gladiator-S",
       "iconLink": "https://assets.tarkov.dev/69d27ebeb855150a70092ba3-icon.webp",
@@ -16321,6 +16953,13 @@
       "turn": -0.5,
       "ergo": -0.5,
       "price": 68696,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 656925,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 270,
@@ -16441,6 +17080,7 @@
     },
     {
       "id": "/armor/fort-gladiator-s-plate-carrier-multicam",
+      "tarkovId": "69d28cdc274c032dd804afe0",
       "name": "Gladiator-S",
       "shortName": "Gladiator-S",
       "iconLink": "https://assets.tarkov.dev/69d28cdc274c032dd804afe0-icon.webp",
@@ -16454,6 +17094,11 @@
       "turn": -3.5,
       "ergo": -3,
       "price": 94803,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 5,
         "durability": 345,
@@ -16637,6 +17282,7 @@
     },
     {
       "id": "/armor/first-spear-strandhogg-plate-carrier-multicam-black",
+      "tarkovId": "69d36347705756116e0a901c",
       "name": "Strandhogg",
       "shortName": "Strandhogg",
       "iconLink": "https://assets.tarkov.dev/69d36347705756116e0a901c-icon.webp",
@@ -16650,6 +17296,13 @@
       "turn": 0,
       "ergo": 0,
       "price": 36118,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL3",
+        "price": 484875.00000000006,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 4,
         "durability": 198,
@@ -16849,6 +17502,7 @@
     },
     {
       "id": "/armor/fort-gladiator-s-plate-carrier-gray",
+      "tarkovId": "69d3708c8d8009073d0a9df4",
       "name": "Gladiator-S",
       "shortName": "Gladiator-S",
       "iconLink": "https://assets.tarkov.dev/69d3708c8d8009073d0a9df4-icon.webp",
@@ -16862,6 +17516,13 @@
       "turn": -2,
       "ergo": -2,
       "price": 69325,
+      "acquisition": {
+        "kind": "barter",
+        "source": "Barter · Ref LL4",
+        "price": 662925,
+        "taskUnlock": null,
+        "estimated": true
+      },
       "properties": {
         "class": 5,
         "durability": 345,
@@ -17073,6 +17734,7 @@
     },
     {
       "id": "/armor/spiritus-systems-lv-119-plate-carrier-multicam-black",
+      "tarkovId": "69e2441a18cb3157560855ec",
       "name": "LV-119",
       "shortName": "LV-119",
       "iconLink": "https://assets.tarkov.dev/69e2441a18cb3157560855ec-icon.webp",
@@ -17086,6 +17748,11 @@
       "turn": -2,
       "ergo": -1,
       "price": 72385,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 5,
         "durability": 198,
@@ -17198,6 +17865,7 @@
     },
     {
       "id": "/armor/ana-tactical-m2-plate-carrier-a-tacs-ix",
+      "tarkovId": "6a5629dfbd83cb160606681c",
       "name": "ANA M2",
       "shortName": "ANA M2",
       "iconLink": "https://assets.tarkov.dev/6a5629dfbd83cb160606681c-icon.webp",
@@ -17211,6 +17879,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 4,
         "durability": 206,
@@ -17399,6 +18072,7 @@
     },
     {
       "id": "/armor/ana-tactical-m2-plate-carrier-a-tacs-au-x",
+      "tarkovId": "6a562a1f4281184d32097600",
       "name": "ANA M2",
       "shortName": "ANA M2",
       "iconLink": "https://assets.tarkov.dev/6a562a1f4281184d32097600-icon.webp",
@@ -17412,6 +18086,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 4,
         "durability": 206,
@@ -17600,6 +18279,7 @@
     },
     {
       "id": "/armor/ana-tactical-m1-plate-carrier-emr",
+      "tarkovId": "6a576f2105af50743903b74c",
       "name": "ANA M1",
       "shortName": "ANA M1",
       "iconLink": "https://assets.tarkov.dev/6a576f2105af50743903b74c-icon.webp",
@@ -17613,6 +18293,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 4,
         "durability": 194,
@@ -17801,6 +18486,7 @@
     },
     {
       "id": "/armor/blue-force-gear-plateminus-v2-plate-carrier-wolf-gray",
+      "tarkovId": "6a7b45c3400bf8420f0e06fe",
       "name": "PLATEminus V2",
       "shortName": "PLATEminus V2",
       "iconLink": "https://assets.tarkov.dev/6a7b45c3400bf8420f0e06fe-icon.webp",
@@ -17814,6 +18500,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 68,
@@ -17988,6 +18679,7 @@
     },
     {
       "id": "/armor/blue-force-gear-plateminus-v2-plate-carrier-scourge",
+      "tarkovId": "6a7c8432f5f1ecf7b1033aee",
       "name": "PLATEminus V2",
       "shortName": "PLATEminus V2",
       "iconLink": "https://assets.tarkov.dev/6a7c8432f5f1ecf7b1033aee-icon.webp",
@@ -18001,6 +18693,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 68,
@@ -18175,6 +18872,7 @@
     },
     {
       "id": "/armor/blue-force-gear-plateminus-v2-plate-carrier-coyote-brown",
+      "tarkovId": "6a7c845c1fa6226c17096359",
       "name": "PLATEminus V2",
       "shortName": "PLATEminus V2",
       "iconLink": "https://assets.tarkov.dev/6a7c845c1fa6226c17096359-icon.webp",
@@ -18188,6 +18886,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 68,
@@ -18362,6 +19065,7 @@
     },
     {
       "id": "/armor/blue-force-gear-plateminus-v2-plate-carrier-multicam",
+      "tarkovId": "6a7c84862369e59dd30712f6",
       "name": "PLATEminus V2",
       "shortName": "PLATEminus V2",
       "iconLink": "https://assets.tarkov.dev/6a7c84862369e59dd30712f6-icon.webp",
@@ -18375,6 +19079,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 68,
@@ -18549,6 +19258,7 @@
     },
     {
       "id": "/armor/stich-profi-stich-defense-mod2-plate-carrier-cleanup-crew",
+      "tarkovId": "6a7c8531bcddc78fbd0f04c1",
       "name": "SD mod.2",
       "shortName": "SD mod.2",
       "iconLink": "https://assets.tarkov.dev/6a7c8531bcddc78fbd0f04c1-icon.webp",
@@ -18562,6 +19272,11 @@
       "turn": -2,
       "ergo": -1,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 3,
         "durability": 155,
@@ -18768,6 +19483,7 @@
     },
     {
       "id": "/armor/stich-profi-stich-defense-mod2-plate-carrier-a-tacs-fg",
+      "tarkovId": "6a7c855ba20fcf832f01ff78",
       "name": "SD mod.2",
       "shortName": "SD mod.2",
       "iconLink": "https://assets.tarkov.dev/6a7c855ba20fcf832f01ff78-icon.webp",
@@ -18781,6 +19497,11 @@
       "turn": -2,
       "ergo": -1,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 3,
         "durability": 155,
@@ -18987,6 +19708,7 @@
     },
     {
       "id": "/armor/blue-force-gear-plateminus-v2-body-armor-coyote-brown",
+      "tarkovId": "6a7d896ea38adecfcb0c6cbd",
       "name": "PLATEminus V2",
       "shortName": "PLATEminus V2",
       "iconLink": "https://assets.tarkov.dev/6a7d896ea38adecfcb0c6cbd-icon.webp",
@@ -19000,6 +19722,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 68,
@@ -19174,6 +19901,7 @@
     },
     {
       "id": "/armor/blue-force-gear-plateminus-v2-body-armor-wolf-gray",
+      "tarkovId": "6a7d8987b8903961a50d4f70",
       "name": "PLATEminus V2",
       "shortName": "PLATEminus V2",
       "iconLink": "https://assets.tarkov.dev/6a7d8987b8903961a50d4f70-icon.webp",
@@ -19187,6 +19915,11 @@
       "turn": 0,
       "ergo": 0,
       "price": null,
+      "acquisition": {
+        "kind": "special",
+        "source": "FIR / special",
+        "price": null
+      },
       "properties": {
         "class": 2,
         "durability": 68,

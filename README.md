@@ -31,7 +31,7 @@ npm run export
 npm run serve
 ```
 
-Open `http://localhost:4173` for the searchable browser view.
+Open `http://localhost:4173` for the searchable browser view. Search is typo tolerant and matches partial names, variants, and acquisition sources even when the query does not begin with the first word.
 
 ## Sources
 
@@ -40,6 +40,12 @@ Open `http://localhost:4173` for the searchable browser view.
 - [Escape from Tarkov Wiki — Chest rigs](https://escapefromtarkov.fandom.com/wiki/Chest_rigs): default armored-rig plates.
 
 The saved snapshot contains 108 armored items: 49 body armors and 59 armored rigs. Source dates are printed in the generated charts.
+
+## Acquisition reasoning
+
+The Obtain column chooses the first available source in this order: direct trader cash offer, cheapest estimated barter, flea market, hideout craft, quest reward, then a conservative FIR/special fallback. A tilde before a price means it is an estimate based on the current market value of consumed barter or crafting ingredients.
+
+Public feeds do not always distinguish event, Arena, and other limited availability reliably. `data/acquisition-overrides.json` exists for reviewed exceptions; uncertain cases are never assigned a specific source by guesswork.
 
 ## Coverage reasoning
 
@@ -58,6 +64,7 @@ The diagrams are deliberately schematic. They explain equipment coverage and do 
 ## Project structure
 
 - `data/` — saved item and plate data
+- `data/acquisition-overrides.json` — reviewed special acquisition labels
 - `assets/icons/` — locally cached transparent item artwork
 - `assets/armor-front.svg` and `assets/armor-back.svg` — named editable coverage masters
 - `scripts/refresh.mjs` — refresh item data

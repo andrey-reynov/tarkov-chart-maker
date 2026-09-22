@@ -8,12 +8,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 
 ### Planned
 
-- Remove the bottom armor-level legend and replace it with an expanded Battlestate Games ownership notice, source credits, and an accuracy disclaimer.
-- Scale armor coverage previews to approximately 92% while preserving the current row height.
-- Reduce unused space after the equipment image and name.
-- Replace the separate Material, Weight, Speed, and Ergo columns with one compact Details column containing one labeled value per line.
-- Add acquisition information: preferred trader and price, barter, flea market, craft, quest reward, found-in-raid-only, event, Arena, or unavailable status.
-- Add a reviewed override file for acquisition states that cannot be determined reliably from public APIs.
+- Review event and Arena acquisition overrides as new equipment is introduced.
 
 ### Added
 
@@ -23,4 +18,13 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 - Armor classes for torso, sides, groin, rear groin, collar, and upper arms.
 - Class grouping, repeated column headers, and a continuous class color strip.
 - Local browser interface with filtering, sorting, and SVG export.
+- Acquisition information for trader sales, estimated barter cost, flea market, craft, quest reward, and FIR or special availability.
+- Reviewed acquisition override file for event, Arena, quest, and other exceptional availability.
+- Typo-tolerant web search that matches names, variants, and acquisition sources from any position.
 
+### Changed
+
+- Replaced the four Material, Weight, Speed, and Ergo columns with one compact multiline Details column.
+- Reduced armor previews to approximately 92% while preserving row height.
+- Tightened equipment spacing to devote more room to useful data.
+- Replaced the bottom armor legend with Battlestate Games ownership, source attribution, and accuracy notices.

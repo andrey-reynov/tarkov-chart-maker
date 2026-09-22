@@ -1,0 +1,4 @@
+{
+  "description": "Reviewed acquisition labels for event, Arena, quest, or other cases that public API feeds cannot classify reliably. Keys are Tarkov item IDs.",
+  "items": {}
+}
