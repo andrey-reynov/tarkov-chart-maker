@@ -12,13 +12,14 @@ function figure(item,view){
   svg.setAttribute('width','66');svg.setAttribute('height','78');svg.setAttribute('role','img');svg.setAttribute('aria-label',`${view} helmet coverage`);
   for(const group of svg.querySelectorAll('[data-part]')){
     const level=coverageLevel(item,group.dataset.part),shape=group.querySelector('path,rect');
-    shape.setAttribute('fill',colors[level]||'#434D45');shape.setAttribute('stroke',level?'#1d281e':'#A9B7A4');
+    shape.setAttribute('fill',colors[level]||'#434D45');shape.setAttribute('stroke',group.dataset.part==='eyes'?'#E3EBDF':level?'#1d281e':'#A9B7A4');
+    if(group.dataset.part==='eyes')shape.setAttribute('stroke-width','1.1');
   }
   return `<span class="helmet-view">${new XMLSerializer().serializeToString(svg)}<small>${view.toUpperCase()}</small></span>`;
 }
 function zoneSummary(item){
   const labels=[['Top',item.top],['Back',item.back],['Ears',item.ears],['Eyes',item.eyes],['Face',item.face],['Jaw',item.jaw],['Throat',item.throat],['Back neck',item.backNeck]];
-  return labels.filter(([,level])=>level).map(([name,level])=>`${name} ${level}`).join(' · ')||'No recorded armor zones';
+  return labels.filter(([name,level])=>level||['Top','Back','Ears'].includes(name)).map(([name,level])=>`${name} ${level??'?'}`).join(' · ');
 }
 const hearing=value=>({None:'Clear',Low:'Slightly muffled',High:'Heavily muffled'}[value]||'Unknown');
 function render(){

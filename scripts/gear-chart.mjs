@@ -31,14 +31,15 @@ function helmetLevel(item,part){
 function helmetShape(item,view,y,x){
   const parts=helmetMasters[view].map(([,part,markup])=>{
     const level=helmetLevel(item,part);
-    return `<g id="${item.id}-${view}-${part}" data-part="${part}">${markup.replace('fill="#434D45"',`fill="${colors[level]||'#434D45'}"`).replace('stroke="#A9B7A4"',`stroke="${level?'#1d281e':'#A9B7A4'}"`)}</g>`;
+    const stroke=part==='eyes'?'#E3EBDF':level?'#1d281e':'#A9B7A4';
+    return `<g id="${item.id}-${view}-${part}" data-part="${part}">${markup.replace('fill="#434D45"',`fill="${colors[level]||'#434D45'}"`).replace('stroke="#A9B7A4"',`stroke="${stroke}"${part==='eyes'?' stroke-width="1.1"':''}`)}</g>`;
   }).join('');
   return `<g transform="translate(${x} ${y+12}) scale(2.30)">${parts}</g><text x="${x+32}" y="${y+103}" text-anchor="middle" class="head">${view.toUpperCase()}</text>`;
 }
 export function makeHelmetChart(){
   const data=JSON.parse(fs.readFileSync('data/helmets.json','utf8'));
   const items=[...data.items].sort((a,b)=>b.class-a.class||b.durability-a.durability||a.name.localeCompare(b.name));
-  const columns=[['HELMET',52],['FRONT / BACK',680],['DUR',900],['ZONES',990],['DETAILS',1280],['OBTAIN',1530]];
+  const columns=[['HELMET',52],['FRONT / BACK',680],['DUR',900],['ZONES',990],['DETAILS',1220],['OBTAIN',1530]];
   let y=162,body='';
   for(const cls of [...new Set(items.map(item=>item.class))]){
     const group=items.filter(item=>item.class===cls),color=colors[cls];
@@ -46,10 +47,10 @@ export function makeHelmetChart(){
     for(const [index,item] of group.entries()){
       const faceZones=[['Eyes',item.eyes],['Face',item.face],['Jaw',item.jaw]].filter(([,value])=>value).map(([name,value])=>`${name} ${value}`).join(' · ');
       const neckZones=[['Throat',item.throat],['Back neck',item.backNeck]].filter(([,value])=>value).map(([name,value])=>`${name} ${value}`).join(' · ');
-      const zoneLines=[`Top ${item.top||'—'} · Back ${item.back||'—'} · Ears ${item.ears||'—'}`,faceZones,neckZones].filter(Boolean);
+      const zoneLines=[`Top ${item.top??'?'} · Back ${item.back??'?'} · Ears ${item.ears??'?'}`,faceZones,neckZones].filter(Boolean);
       const zoneText=zoneLines.map((line,lineIndex)=>`<text x="990" y="${y+39+lineIndex*25}" class="small">${esc(line)}</text>`).join('');
       const hearing={None:'Clear',Low:'Slightly muffled',High:'Heavily muffled'}[item.deafening]||'Unknown';
-      body+=`<g id="helmet-${esc(item.id)}"><rect y="${y}" width="1800" height="112" fill="${index%2?'#1b221b':'#222a20'}"/><rect y="${y}" width="32" height="112" fill="${color}"/><text x="16" y="${y+67}" text-anchor="middle" font-size="21" font-weight="900" fill="#16231a">${cls}</text><image x="52" y="${y+11}" width="88" height="88" preserveAspectRatio="xMidYMid meet" href="${image(item.localIcon)}"/><text x="155" y="${y+57}" class="name">${esc(cut(item.name,47))}</text>${helmetShape(item,'front',y,680)}${helmetShape(item,'back',y,770)}<text x="900" y="${y+59}" class="value">${fmt(item.durability)}</text>${zoneText}<text x="1280" y="${y+32}" class="small">⚖ ${fmt(item.weight)} kg<tspan x="1280" dy="22">↗ ${item.speed}% speed</tspan><tspan x="1280" dy="22">◈ ${item.ergo}% ergo</tspan><tspan x="1280" dy="22">Hearing: ${esc(hearing)}</tspan></text>${seller(item.acquisition,y,1530)}</g>`;
+      body+=`<g id="helmet-${esc(item.id)}"><rect y="${y}" width="1800" height="112" fill="${index%2?'#1b221b':'#222a20'}"/><rect y="${y}" width="32" height="112" fill="${color}"/><text x="16" y="${y+67}" text-anchor="middle" font-size="21" font-weight="900" fill="#16231a">${cls}</text><image x="52" y="${y+11}" width="88" height="88" preserveAspectRatio="xMidYMid meet" href="${image(item.localIcon)}"/><text x="155" y="${y+57}" class="name">${esc(cut(item.name,47))}</text>${helmetShape(item,'front',y,680)}${helmetShape(item,'back',y,770)}<text x="900" y="${y+59}" class="value">${fmt(item.durability)}</text>${zoneText}<text x="1220" y="${y+32}" class="small">⚖ ${fmt(item.weight)} kg<tspan x="1220" dy="22">↗ ${item.speed}% speed</tspan><tspan x="1220" dy="22">◈ ${item.ergo}% ergo</tspan><tspan x="1220" dy="22">Hearing: ${esc(hearing)}</tspan></text>${seller(item.acquisition,y,1530)}</g>`;
       y+=112;
     }
     body+=`<rect y="${y}" width="1800" height="40" fill="#34412f"/>${columns.map(([label,x])=>`<text x="${x}" y="${y+26}" class="head">${label}</text>`).join('')}`;y+=40;
