@@ -31,8 +31,7 @@ function helmetLevel(item,part){
 function helmetShape(item,view,y,x){
   const parts=helmetMasters[view].map(([,part,markup])=>{
     const level=helmetLevel(item,part);
-    const stroke=part==='eyes'?'#E3EBDF':level?'#1d281e':'#A9B7A4';
-    return `<g id="${item.id}-${view}-${part}" data-part="${part}">${markup.replace('fill="#434D45"',`fill="${colors[level]||'#434D45'}"`).replace('stroke="#A9B7A4"',`stroke="${stroke}"${part==='eyes'?' stroke-width="1.1"':''}`)}</g>`;
+    return `<g id="${item.id}-${view}-${part}" data-part="${part}">${markup.replace('fill="#434D45"',`fill="${colors[level]||'#434D45'}"`).replace('stroke="#A9B7A4"',`stroke="${level?colors[level]:'#A9B7A4'}"`)}</g>`;
   }).join('');
   return `<g transform="translate(${x} ${y+12}) scale(2.30)">${parts}</g><text x="${x+32}" y="${y+103}" text-anchor="middle" class="head">${view.toUpperCase()}</text>`;
 }

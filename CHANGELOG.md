@@ -33,6 +33,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) co
 
 ### Changed
 
+- Colored the outlines of protected helmet regions to match their fill; unprotected regions retain the original gray outline.
 - Kept the glasses outline visible when its protection color is applied, marked unknown top/back/ear coverage with `?`, and narrowed helmet zone columns.
 - Helmet charts now place durability after coverage icons, show compact per-zone armor classes, and group weight, movement, ergonomics, and hearing in Details.
 - Helmet rows now repeat the armor class number in the colored class strip.

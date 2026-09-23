@@ -12,8 +12,7 @@ function figure(item,view){
   svg.setAttribute('width','66');svg.setAttribute('height','78');svg.setAttribute('role','img');svg.setAttribute('aria-label',`${view} helmet coverage`);
   for(const group of svg.querySelectorAll('[data-part]')){
     const level=coverageLevel(item,group.dataset.part),shape=group.querySelector('path,rect');
-    shape.setAttribute('fill',colors[level]||'#434D45');shape.setAttribute('stroke',group.dataset.part==='eyes'?'#E3EBDF':level?'#1d281e':'#A9B7A4');
-    if(group.dataset.part==='eyes')shape.setAttribute('stroke-width','1.1');
+    shape.setAttribute('fill',colors[level]||'#434D45');shape.setAttribute('stroke',level?colors[level]:'#A9B7A4');
   }
   return `<span class="helmet-view">${new XMLSerializer().serializeToString(svg)}<small>${view.toUpperCase()}</small></span>`;
 }
